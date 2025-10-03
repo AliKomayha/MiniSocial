@@ -1,0 +1,61 @@
+﻿@model MiniSocial.Models.User
+
+@{
+    ViewData["Title"] = "Signup";
+}
+
+<div class="row justify-content-center mt-5">
+    <div class="col-12 col-md-8 col-lg-6">
+        <div class="card shadow">
+
+            <div class="card-header">
+                <h4 class="mb-0">
+                    Sign up
+                </h4>
+            </div>
+
+            <div class="card-body">
+
+                <form asp-action="Signup" method="post">
+
+                    <div class="form-group mb-3">
+                        <label for="Email">Email</label>
+                        <input type="email" class="form-control" id="Email" name="user.Email" required />
+                    </div>
+                    
+                    <div class="form-group mb-3">
+                        <label for="PasswordHash">Password</label>
+                        <input type="password" class="form-control" id="PasswordHash" name="user.PasswordHash" required />
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="DisplayName">Display Name</label>
+                        <input type="text" class="form-control" id="DisplayName" name="profile.DisplayName" required />
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="Username">User Name</label>
+                        <input type="text" class="form-control" id="Username" name="user.Username" required />
+                    </div>
+
+                    
+
+                    
+
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger mt-3">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <p>@error.ErrorMessage</p>
+        }
+    </div>
+}
+

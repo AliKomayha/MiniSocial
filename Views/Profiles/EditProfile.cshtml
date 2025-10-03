@@ -1,0 +1,69 @@
+﻿@model MiniSocial.Models.Profile
+
+@{
+    ViewData["Title"] = "Edit Profile";
+}
+
+<div class="row justify-content-center mt-5">
+    <div class="col-12 col-md-8 col-lg-6">
+        <div class="card shadow">
+
+            <div class="card-header">
+                <h4 class="mb-0">Edit Profile</h4>
+            </div>
+
+            <div class="card-body">
+
+                <form asp-action="EditProfile" method="post" enctype="multipart/form-data">
+
+                    <div class="form-group mb-3">
+                        <label for="DisplayName">Display Name</label>
+                        <input type="text" class="form-control" id="DisplayName" name="DisplayName" value="@Model.DisplayName" required />
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="Bio">Bio</label>
+                        <textarea class="form-control" id="Bio" name="Bio" rows="3">@Model.Bio</textarea>
+                    </div>
+
+
+                    @* updloading image as avatar *@
+                    <div class="form-group mb-3">
+                        <label for="AvatarFile">Avatar URL</label>
+                        
+                        <input type="file" name="AvatarFile" class="form-control" accept="image/*" />
+                        @if (!string.IsNullOrEmpty(Model.Avatar))
+                        {
+                            <img src="@Model.Avatar" alt="Avatar" class="img-thumbnail mt-2" style="max-width:150px;" />
+                        }
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="BirthDate">Birth Date</label>
+                        <input type="date" class="form-control" id="BirthDate" name="BirthDate" value="@(Model.BirthDate?.ToString("yyyy-MM-dd"))" />
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="IsPrivate" name="IsPrivate" value="true" @(Model.IsPrivate ? "checked" : "") />
+                        <label class="form-check-label" for="IsPrivate">Private Account</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                    <a asp-action="ViewProfile" asp-route-id="@Model.UserId" class="btn btn-secondary ms-2">Cancel</a>
+
+                </form>
+
+                @if (!ViewData.ModelState.IsValid)
+                {
+                    <div class="alert alert-danger mt-3">
+                        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                        {
+                            <p>@error.ErrorMessage</p>
+                        }
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>

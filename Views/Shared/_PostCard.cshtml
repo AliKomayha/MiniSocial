@@ -1,0 +1,26 @@
+﻿@model MiniSocial.Dtos.PostDto
+
+<div class="card mb-3">
+    <div class="card-body">
+        <div class="d-flex align-items-center mb-2">
+            <img src="@Model.Avatar ?? Url.Content(" ~ /images/default-avatar.png")"
+                 alt="Avatar" class="rounded-circle me-2" style="width:40px; height:40px;" />
+            <strong>@Model.DisplayName</strong>
+            <span class="text-muted ms-2" style="font-size:0.85rem;">
+                @Model.CreatedAt.ToString("g")
+            </span>
+        </div>
+
+        <p>@Model.Text</p>
+
+        @if (!string.IsNullOrEmpty(Model.ImagePath))
+        {
+            <img src="@Model.ImagePath" alt="Post Image" class="img-fluid rounded mb-2" />
+        }
+
+        <div class="d-flex justify-content-start text-muted" style="font-size:0.9rem;">
+            <span class="me-3">❤️ @Model.LikeCount</span>
+            <span>💬 @Model.CommentCount</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+﻿@model MiniSocial.Models.ProfileViewModel
+
+@{
+    var currentUserId = int.Parse(User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value);
+    bool isOwner = currentUserId == Model.Profile.UserId;
+}
+<div class="profile-container  mt-4" style="max-width:600px; margin:auto;">
+    
+    <div class="d-flex align-items-center justify-content-between mb-4">
+        <div>
+            <img src="@Model.Profile.Avatar" alt="Avatar" class="rounded-circle shadow" style="width:140px; height:140px; object-fit:cover; border:4px solid #e1e8ed;" />
+        </div>
+        @if (isOwner)
+        {
+            <div>
+                <a class="btn btn-outline-primary px-4 py-2 fw-semibold" style="border-radius:30px;" asp-controller="Profiles" asp-action="EditProfile">Edit Profile</a>
+            </div>
+        }
+    </div>
+
+
+    <div class="mb-2">
+            <h2 class="fw-bold mb-1" style="font-size:2rem;">@Model.Profile.DisplayName</h2>
+            <p class="text-muted mb-2" style="font-size:1.1rem;">@("@" + Model.Profile.User.Username)</p>
+    </div>
+
+    <div class="mb-3 " style="font-size:1.05rem;">
+        @Model.Profile.Bio
+    </div>
+
+    <div class="d-flex justify-content gap-5 mt-2 mb-2">
+        <span><strong>@Model.Counts.FollowersCount</strong> <span class="text-muted">Followers</span></span>
+        <span><strong>@Model.Counts.FollowingCount</strong> <span class="text-muted">Following</span></span>
+    </div>
+
+
+</div>
+<div>
+    <a href="@Url.Action("Create", "Posts")" class="btn btn-success mb-3">Create Post</a>
+</div>
+
+<div class="mt-4">
+    <h4 class="mb-3">Posts</h4>
+    @if (Model.Posts != null && Model.Posts.Any())
+    {
+        @foreach (var post in Model.Posts)
+        {
+            @Html.Partial("_PostCard", post)
+        }
+    }
+    else
+    {
+        <p class="text-muted">No posts yet.</p>
+    }
+</div>
+
+

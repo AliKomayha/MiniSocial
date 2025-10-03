@@ -1,0 +1,11 @@
+﻿@model MiniSocial.Models.ProfileViewModel
+
+<div class="profile">
+    <h2>@Model.Profile.DisplayName</h2>
+    <p>This profile is private.</p>
+
+    <div class="counts">
+        <span><strong>Followers:</strong> @Model.Counts.FollowersCount</span>
+        <span><strong>Following:</strong> @Model.Counts.FollowingCount</span>
+    </div>
+</div>
