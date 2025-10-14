@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace MiniSocial.Models
@@ -18,7 +19,9 @@ namespace MiniSocial.Models
 
         [ValidateNever]
         public User User { get; set; }
-     
+
+        [NotMapped]
+        public IFormFile? ImageFile { get; set; } // for uploads
 
     }
 }

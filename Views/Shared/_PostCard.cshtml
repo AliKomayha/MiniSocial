@@ -1,26 +1,172 @@
 ﻿@model MiniSocial.Dtos.PostDto
 
-<div class="card mb-3">
-    <div class="card-body">
-        <div class="d-flex align-items-center mb-2">
-            <img src="@Model.Avatar ?? Url.Content(" ~ /images/default-avatar.png")"
-                 alt="Avatar" class="rounded-circle me-2" style="width:40px; height:40px;" />
-            <strong>@Model.DisplayName</strong>
-            <span class="text-muted ms-2" style="font-size:0.85rem;">
-                @Model.CreatedAt.ToString("g")
-            </span>
+@{
+    var currentUserId = int.Parse(User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value);
+    bool isOwner = currentUserId == Model.UserId;
+}
+
+<div class="card mb-3" style="border-radius:18px; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+    <div class="card-body pb-2">
+        <div class="d-flex align-items-center mb-1">
+            <img src="@(string.IsNullOrEmpty(@Model.Avatar)
+                             ? Url.Content("~/images/default-avatar.png")
+                             : @Model.Avatar)"
+                 alt="Avatar"
+                 class="rounded-circle me-3"
+                 style="width:48px; height:48px; object-fit:cover; border:2px solid #e1e8ed;" />
+            <div>
+                <span class="fw-bold" style="font-size:1.08rem;">@Model.DisplayName</span>
+                <span class="text-muted ms-1" style="font-size:0.98rem;">@("@" + @Model.UserName)</span>
+                <span class="text-muted ms-2" style="font-size:0.85rem;">· @Model.CreatedAt.ToString("g")</span>
+            </div>
         </div>
 
-        <p>@Model.Text</p>
+            
+
+        @* Dropdown menu for owner *@
+        @if (isOwner)
+        {
+            <div class="ms-auto dropdown">
+                <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="postMenu-@Model.Id" data-bs-toggle="dropdown" aria-expanded="false">
+                    ⋮
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="postMenu-@Model.Id">
+                    <li>
+                        <a class="dropdown-item" asp-controller="Posts" asp-action="Edit" asp-route-id="@Model.Id">
+                            Edit Post
+                        </a>
+                    </li>
+                    <li>
+                        <form asp-controller="Posts" asp-action="Delete" asp-route-id="@Model.Id" method="post" onsubmit="return confirm('Are you sure you want to delete this post?');">
+                            <button type="submit" class="dropdown-item text-danger">Delete Post</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        }
+
+
+        <div class="mb-2" style="font-size:1.08rem;">
+            @Model.Text
+        </div>
 
         @if (!string.IsNullOrEmpty(Model.ImagePath))
         {
-            <img src="@Model.ImagePath" alt="Post Image" class="img-fluid rounded mb-2" />
+            <div class="mb-2 text-center">
+                <img src="@Model.ImagePath"
+                     alt="Post Image"
+                     class="img-fluid rounded"
+                     style="max-width:500px; max-height:350px; object-fit:cover; border:1px solid #e1e8ed;" />
+            </div>
         }
 
-        <div class="d-flex justify-content-start text-muted" style="font-size:0.9rem;">
-            <span class="me-3">❤️ @Model.LikeCount</span>
-            <span>💬 @Model.CommentCount</span>
+        <div class="d-flex justify-content-start text-muted pt-1" style="font-size:1rem;">
+            <button type="button" class="btn btn-link p-0 border-0 text-decoration-none text-danger like-btn"
+                    data-post-id="@Model.Id">
+                ❤️ <span class="like-count">@Model.LikeCount</span>
+            </button>
+            <span class="ms-4">💬 @Model.CommentCount</span>
         </div>
     </div>
 </div>
+
+<div id="comments-@Model.Id" class="px-2 py-2" style="background:#f7f9fa; border-radius:16px;">
+   
+    @if (Model.Comments != null && Model.Comments.Any())
+    {
+        foreach (var comment in Model.Comments)
+        {
+            <div class="d-flex mb-3 ms-4" style="border-bottom:1px solid #e1e8ed; padding-bottom:12px;">
+                <img src="@(string.IsNullOrEmpty(comment.Avatar)
+                                 ? Url.Content("~/images/default-avatar.png")
+                                 : comment.Avatar)"
+                     alt="Avatar"
+                     class="rounded-circle me-2"
+                     style="width:36px; height:36px; object-fit:cover; border:1px solid #e1e8ed;" />
+                <div class="flex-grow-1">
+                    <div>
+                        <span class="fw-bold">@comment.DisplayName</span>
+                        <span class="text-muted ms-1">@("@" + comment.UserName)</span>
+                        <span class="text-muted ms-2" style="font-size:0.85rem;">· @comment.CreatedAt.ToString("g")</span>
+                    </div>
+                    <div class="mb-1" style="font-size:1rem;">@comment.Text</div>
+                    <button type="button"
+                            class="btn btn-link p-0 border-0 text-decoration-none reply-btn"
+                            data-comment-id="@comment.Id"
+                            data-post-id="@Model.Id"
+                            style="font-size:0.95rem; color:#1da1f2;">
+                        Reply
+                    </button>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="text-center text-muted py-3">No replies yet.</div>
+    }
+</div>
+
+
+<form class="mt-2 add-comment-form d-flex align-items-center" data-post-id="@Model.Id" style="background:#fff; border-radius:24px; box-shadow:0 1px 4px rgba(0,0,0,0.04); padding:12px;">
+    <img src="@(string.IsNullOrEmpty(@Model.Avatar)
+                     ? Url.Content("~/images/default-avatar.png")
+                     : @Model.Avatar)"
+         alt="Avatar"
+         class="rounded-circle me-2"
+         style="width:36px; height:36px; object-fit:cover; border:1px solid #e1e8ed;" />
+    <input type="text" name="text" class="form-control me-2" placeholder="Reply..." style="border-radius:24px;" />
+    <input type="hidden" name="parentCommentId" value="" />
+    <button type="submit" class="btn btn-primary btn-sm" style="border-radius:24px;">Reply</button>
+</form>
+
+<script>
+    /**
+     * Handles reply button click:
+     * - Sets parentCommentId in the reply form
+     * - Focuses the reply input
+     */
+    document.addEventListener("click", function (e) {
+        const replyBtn = e.target.closest(".reply-btn");
+        if (!replyBtn) return;
+
+        const parentId = replyBtn.getAttribute("data-comment-id");
+        const postId = replyBtn.getAttribute("data-post-id");
+        const form = document.querySelector(`.add-comment-form[data-post-id='${postId}']`);
+
+        form.querySelector("input[name='parentCommentId']").value = parentId;
+        form.querySelector("input[name='text']").focus();
+    });
+
+    /**
+     * Handles reply form submission:
+     * - Prevents default form submit
+     * - Sends AJAX POST to add comment
+     * - Updates comments section with returned HTML
+     * - Clears input fields
+     * - Removes duplicate event listeners to prevent double insert
+     */
+    (() => {
+        // Remove any previous submit listeners to prevent double insert
+        document.querySelectorAll('.add-comment-form').forEach(form => {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const postId = form.getAttribute("data-post-id");
+                const text = form.querySelector("input[name='text']").value;
+                const parentId = form.querySelector("input[name='parentCommentId']").value;
+
+                fetch(`/Posts/AddComment`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: `postId=${postId}&text=${encodeURIComponent(text)}&parentCommentId=${parentId}`
+                })
+                    .then(res => res.text())
+                    .then(html => {
+                        document.getElementById(`comments-${postId}`).innerHTML = html;
+                        form.querySelector("input[name='text']").value = "";
+                        form.querySelector("input[name='parentCommentId']").value = "";
+                    });
+            }, { once: true }); // Ensures only one listener per form
+        });
+    })();
+</script>

@@ -14,6 +14,8 @@ namespace MiniSocial.Models
         [Required, MaxLength(300)]
         public string Text { get; set; }
 
+        public int? ParentCommentId { get; set; }
+
         [ValidateNever]
         public User User { get; set; }
         [ValidateNever]

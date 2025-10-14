@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "s/03enR6SSZsbd+ylJXbn7lNRbNzAXXUR7xy61+eMN8=",
+  "Hash": "Xifwz4UECYwry868lULW8DkSQ9bv1vlbkd8LMbt37Ys=",
   "Source": "MiniSocial",
   "BasePath": "_content/MiniSocial",
   "Mode": "Default",
@@ -1340,6 +1340,69 @@
       "OriginalItemSpec": "wwwroot\\uploads\\0d323b49-0418-497f-8174-6251468421ca.jpg"
     },
     {
+      "Identity": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\4b1a1e3f-925b-4965-9dc5-521212c147fa.jpg",
+      "SourceId": "MiniSocial",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\",
+      "BasePath": "_content/MiniSocial",
+      "RelativePath": "uploads/4b1a1e3f-925b-4965-9dc5-521212c147fa#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "op2yyx6b90",
+      "Integrity": "POh+LRdmgWwbfZv3YBG17CLCcTxHKUDtso+FuHaNjRs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\4b1a1e3f-925b-4965-9dc5-521212c147fa.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\4cae2ba6-3826-47ba-a709-71fe4b3fbbc6.jpg",
+      "SourceId": "MiniSocial",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\",
+      "BasePath": "_content/MiniSocial",
+      "RelativePath": "uploads/4cae2ba6-3826-47ba-a709-71fe4b3fbbc6#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "7xrwzm0us8",
+      "Integrity": "pQ+mXysEG7K3vOiy3JhtKaiT6svUZa2HNhPaEzbV/z4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\4cae2ba6-3826-47ba-a709-71fe4b3fbbc6.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\c50adc80-4ca5-4b2c-8a5a-9ca119631942.jpg",
+      "SourceId": "MiniSocial",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\",
+      "BasePath": "_content/MiniSocial",
+      "RelativePath": "uploads/c50adc80-4ca5-4b2c-8a5a-9ca119631942#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "k7sdpm5807",
+      "Integrity": "8A6iIMetO+bVGd+WxLP4o8CNKklCIzTJUf+ugaiZrF4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\c50adc80-4ca5-4b2c-8a5a-9ca119631942.jpg"
+    },
+    {
       "Identity": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\d8c51c16-db95-43ba-be3f-8bcb951a7941.jpg",
       "SourceId": "MiniSocial",
       "SourceType": "Discovered",
@@ -1382,6 +1445,174 @@
       "OriginalItemSpec": "wwwroot\\uploads\\e6051e73-8e9f-4f88-8c63-7d9feb9b9853.jpg"
     },
     {
+      "Identity": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\eac1bbe8-23be-46bb-a2ea-a9509e521bfa.jpg",
+      "SourceId": "MiniSocial",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\",
+      "BasePath": "_content/MiniSocial",
+      "RelativePath": "uploads/eac1bbe8-23be-46bb-a2ea-a9509e521bfa#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "op2yyx6b90",
+      "Integrity": "POh+LRdmgWwbfZv3YBG17CLCcTxHKUDtso+FuHaNjRs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\eac1bbe8-23be-46bb-a2ea-a9509e521bfa.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\1c53fb7d-6941-488d-a717-49472bfbb9a0.jpg",
+      "SourceId": "MiniSocial",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\",
+      "BasePath": "_content/MiniSocial",
+      "RelativePath": "uploads/posts/1c53fb7d-6941-488d-a717-49472bfbb9a0#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "r7sg04g1wi",
+      "Integrity": "18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\1c53fb7d-6941-488d-a717-49472bfbb9a0.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\506c9de4-eba2-4df5-a46c-dd959f6b52a4.jpg",
+      "SourceId": "MiniSocial",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\",
+      "BasePath": "_content/MiniSocial",
+      "RelativePath": "uploads/posts/506c9de4-eba2-4df5-a46c-dd959f6b52a4#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "r7sg04g1wi",
+      "Integrity": "18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\506c9de4-eba2-4df5-a46c-dd959f6b52a4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\8ff0bbe5-aa02-4738-b1a0-24423c2dd84c.jpg",
+      "SourceId": "MiniSocial",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\",
+      "BasePath": "_content/MiniSocial",
+      "RelativePath": "uploads/posts/8ff0bbe5-aa02-4738-b1a0-24423c2dd84c#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "r7sg04g1wi",
+      "Integrity": "18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\8ff0bbe5-aa02-4738-b1a0-24423c2dd84c.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\a58a6499-4b4a-45b0-8395-b5e5a693edb4.jpg",
+      "SourceId": "MiniSocial",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\",
+      "BasePath": "_content/MiniSocial",
+      "RelativePath": "uploads/posts/a58a6499-4b4a-45b0-8395-b5e5a693edb4#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "r7sg04g1wi",
+      "Integrity": "18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\a58a6499-4b4a-45b0-8395-b5e5a693edb4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\a93cb68b-5105-4e67-a818-d8b30993fba0.jpg",
+      "SourceId": "MiniSocial",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\",
+      "BasePath": "_content/MiniSocial",
+      "RelativePath": "uploads/posts/a93cb68b-5105-4e67-a818-d8b30993fba0#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "r7sg04g1wi",
+      "Integrity": "18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\a93cb68b-5105-4e67-a818-d8b30993fba0.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\d868722b-e8a2-4c18-9e35-23f910cc373d.jpg",
+      "SourceId": "MiniSocial",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\",
+      "BasePath": "_content/MiniSocial",
+      "RelativePath": "uploads/posts/d868722b-e8a2-4c18-9e35-23f910cc373d#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "r7sg04g1wi",
+      "Integrity": "18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\d868722b-e8a2-4c18-9e35-23f910cc373d.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\e28bfd97-1f81-41a5-8f7f-5332f2ffb1e7.jpg",
+      "SourceId": "MiniSocial",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\",
+      "BasePath": "_content/MiniSocial",
+      "RelativePath": "uploads/posts/e28bfd97-1f81-41a5-8f7f-5332f2ffb1e7#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "k7sdpm5807",
+      "Integrity": "8A6iIMetO+bVGd+WxLP4o8CNKklCIzTJUf+ugaiZrF4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\e28bfd97-1f81-41a5-8f7f-5332f2ffb1e7.jpg"
+    },
+    {
       "Identity": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\f421d839-86c6-4e5b-b3b7-e162cd831f20_photo_3_2024-01-21_22-11-51.jpg",
       "SourceId": "MiniSocial",
       "SourceType": "Discovered",
@@ -1401,6 +1632,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\posts\\f421d839-86c6-4e5b-b3b7-e162cd831f20_photo_3_2024-01-21_22-11-51.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\fc9b1dde-18b5-49de-9ae0-08f72cdb4e30.jpg",
+      "SourceId": "MiniSocial",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\",
+      "BasePath": "_content/MiniSocial",
+      "RelativePath": "uploads/posts/fc9b1dde-18b5-49de-9ae0-08f72cdb4e30#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "r7sg04g1wi",
+      "Integrity": "18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\fc9b1dde-18b5-49de-9ae0-08f72cdb4e30.jpg"
     }
   ],
   "Endpoints": [
@@ -6347,7 +6599,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 01 Oct 2025 21:51:31 GMT"
+          "Value": "Fri, 10 Oct 2025 10:56:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6384,7 +6636,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 01 Oct 2025 21:51:31 GMT"
+          "Value": "Fri, 10 Oct 2025 10:56:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6429,7 +6681,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 01 Oct 2025 21:51:31 GMT"
+          "Value": "Fri, 10 Oct 2025 10:56:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6474,7 +6726,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 01 Oct 2025 21:51:31 GMT"
+          "Value": "Fri, 10 Oct 2025 10:56:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6563,6 +6815,252 @@
         {
           "Name": "label",
           "Value": "uploads/0d323b49-0418-497f-8174-6251468421ca.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8A6iIMetO+bVGd+WxLP4o8CNKklCIzTJUf+ugaiZrF4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/4b1a1e3f-925b-4965-9dc5-521212c147fa.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\4b1a1e3f-925b-4965-9dc5-521212c147fa.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "178451"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"POh+LRdmgWwbfZv3YBG17CLCcTxHKUDtso+FuHaNjRs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 01:19:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-POh+LRdmgWwbfZv3YBG17CLCcTxHKUDtso+FuHaNjRs="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/4b1a1e3f-925b-4965-9dc5-521212c147fa.op2yyx6b90.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\4b1a1e3f-925b-4965-9dc5-521212c147fa.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "178451"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"POh+LRdmgWwbfZv3YBG17CLCcTxHKUDtso+FuHaNjRs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 01:19:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "op2yyx6b90"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/4b1a1e3f-925b-4965-9dc5-521212c147fa.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-POh+LRdmgWwbfZv3YBG17CLCcTxHKUDtso+FuHaNjRs="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/4cae2ba6-3826-47ba-a709-71fe4b3fbbc6.7xrwzm0us8.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\4cae2ba6-3826-47ba-a709-71fe4b3fbbc6.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "173599"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pQ+mXysEG7K3vOiy3JhtKaiT6svUZa2HNhPaEzbV/z4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 01:19:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "7xrwzm0us8"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/4cae2ba6-3826-47ba-a709-71fe4b3fbbc6.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pQ+mXysEG7K3vOiy3JhtKaiT6svUZa2HNhPaEzbV/z4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/4cae2ba6-3826-47ba-a709-71fe4b3fbbc6.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\4cae2ba6-3826-47ba-a709-71fe4b3fbbc6.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "173599"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pQ+mXysEG7K3vOiy3JhtKaiT6svUZa2HNhPaEzbV/z4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 01:19:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pQ+mXysEG7K3vOiy3JhtKaiT6svUZa2HNhPaEzbV/z4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/c50adc80-4ca5-4b2c-8a5a-9ca119631942.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\c50adc80-4ca5-4b2c-8a5a-9ca119631942.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "158885"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8A6iIMetO+bVGd+WxLP4o8CNKklCIzTJUf+ugaiZrF4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 03 Oct 2025 17:51:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8A6iIMetO+bVGd+WxLP4o8CNKklCIzTJUf+ugaiZrF4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/c50adc80-4ca5-4b2c-8a5a-9ca119631942.k7sdpm5807.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\c50adc80-4ca5-4b2c-8a5a-9ca119631942.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "158885"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8A6iIMetO+bVGd+WxLP4o8CNKklCIzTJUf+ugaiZrF4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 03 Oct 2025 17:51:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k7sdpm5807"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/c50adc80-4ca5-4b2c-8a5a-9ca119631942.jpg"
         },
         {
           "Name": "integrity",
@@ -6735,6 +7233,662 @@
       ]
     },
     {
+      "Route": "uploads/eac1bbe8-23be-46bb-a2ea-a9509e521bfa.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\eac1bbe8-23be-46bb-a2ea-a9509e521bfa.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "178451"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"POh+LRdmgWwbfZv3YBG17CLCcTxHKUDtso+FuHaNjRs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 08 Oct 2025 22:02:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-POh+LRdmgWwbfZv3YBG17CLCcTxHKUDtso+FuHaNjRs="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/eac1bbe8-23be-46bb-a2ea-a9509e521bfa.op2yyx6b90.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\eac1bbe8-23be-46bb-a2ea-a9509e521bfa.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "178451"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"POh+LRdmgWwbfZv3YBG17CLCcTxHKUDtso+FuHaNjRs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 08 Oct 2025 22:02:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "op2yyx6b90"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/eac1bbe8-23be-46bb-a2ea-a9509e521bfa.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-POh+LRdmgWwbfZv3YBG17CLCcTxHKUDtso+FuHaNjRs="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/1c53fb7d-6941-488d-a717-49472bfbb9a0.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\1c53fb7d-6941-488d-a717-49472bfbb9a0.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "216454"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 11:14:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/1c53fb7d-6941-488d-a717-49472bfbb9a0.r7sg04g1wi.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\1c53fb7d-6941-488d-a717-49472bfbb9a0.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "216454"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 11:14:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "r7sg04g1wi"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/1c53fb7d-6941-488d-a717-49472bfbb9a0.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/506c9de4-eba2-4df5-a46c-dd959f6b52a4.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\506c9de4-eba2-4df5-a46c-dd959f6b52a4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "216454"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 11:24:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/506c9de4-eba2-4df5-a46c-dd959f6b52a4.r7sg04g1wi.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\506c9de4-eba2-4df5-a46c-dd959f6b52a4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "216454"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 11:24:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "r7sg04g1wi"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/506c9de4-eba2-4df5-a46c-dd959f6b52a4.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/8ff0bbe5-aa02-4738-b1a0-24423c2dd84c.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\8ff0bbe5-aa02-4738-b1a0-24423c2dd84c.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "216454"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 11:36:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/8ff0bbe5-aa02-4738-b1a0-24423c2dd84c.r7sg04g1wi.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\8ff0bbe5-aa02-4738-b1a0-24423c2dd84c.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "216454"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 11:36:11 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "r7sg04g1wi"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/8ff0bbe5-aa02-4738-b1a0-24423c2dd84c.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/a58a6499-4b4a-45b0-8395-b5e5a693edb4.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\a58a6499-4b4a-45b0-8395-b5e5a693edb4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "216454"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 11:32:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/a58a6499-4b4a-45b0-8395-b5e5a693edb4.r7sg04g1wi.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\a58a6499-4b4a-45b0-8395-b5e5a693edb4.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "216454"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 11:32:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "r7sg04g1wi"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/a58a6499-4b4a-45b0-8395-b5e5a693edb4.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/a93cb68b-5105-4e67-a818-d8b30993fba0.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\a93cb68b-5105-4e67-a818-d8b30993fba0.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "216454"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 11:37:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/a93cb68b-5105-4e67-a818-d8b30993fba0.r7sg04g1wi.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\a93cb68b-5105-4e67-a818-d8b30993fba0.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "216454"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 11:37:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "r7sg04g1wi"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/a93cb68b-5105-4e67-a818-d8b30993fba0.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/d868722b-e8a2-4c18-9e35-23f910cc373d.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\d868722b-e8a2-4c18-9e35-23f910cc373d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "216454"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 11:31:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/d868722b-e8a2-4c18-9e35-23f910cc373d.r7sg04g1wi.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\d868722b-e8a2-4c18-9e35-23f910cc373d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "216454"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 11:31:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "r7sg04g1wi"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/d868722b-e8a2-4c18-9e35-23f910cc373d.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/e28bfd97-1f81-41a5-8f7f-5332f2ffb1e7.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\e28bfd97-1f81-41a5-8f7f-5332f2ffb1e7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "158885"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8A6iIMetO+bVGd+WxLP4o8CNKklCIzTJUf+ugaiZrF4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 11:41:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8A6iIMetO+bVGd+WxLP4o8CNKklCIzTJUf+ugaiZrF4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/e28bfd97-1f81-41a5-8f7f-5332f2ffb1e7.k7sdpm5807.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\e28bfd97-1f81-41a5-8f7f-5332f2ffb1e7.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "158885"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8A6iIMetO+bVGd+WxLP4o8CNKklCIzTJUf+ugaiZrF4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 11:41:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "k7sdpm5807"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/e28bfd97-1f81-41a5-8f7f-5332f2ffb1e7.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8A6iIMetO+bVGd+WxLP4o8CNKklCIzTJUf+ugaiZrF4="
+        }
+      ]
+    },
+    {
       "Route": "uploads/posts/f421d839-86c6-4e5b-b3b7-e162cd831f20_photo_3_2024-01-21_22-11-51.jpg",
       "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\f421d839-86c6-4e5b-b3b7-e162cd831f20_photo_3_2024-01-21_22-11-51.jpg",
       "Selectors": [],
@@ -6809,6 +7963,88 @@
         {
           "Name": "label",
           "Value": "uploads/posts/f421d839-86c6-4e5b-b3b7-e162cd831f20_photo_3_2024-01-21_22-11-51.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/fc9b1dde-18b5-49de-9ae0-08f72cdb4e30.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\fc9b1dde-18b5-49de-9ae0-08f72cdb4e30.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "216454"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 11:35:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/fc9b1dde-18b5-49de-9ae0-08f72cdb4e30.r7sg04g1wi.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\fc9b1dde-18b5-49de-9ae0-08f72cdb4e30.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "216454"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 10 Oct 2025 11:35:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "r7sg04g1wi"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/fc9b1dde-18b5-49de-9ae0-08f72cdb4e30.jpg"
         },
         {
           "Name": "integrity",

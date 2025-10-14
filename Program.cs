@@ -9,7 +9,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<FollowService>();
 builder.Services.AddScoped<ProfileService>();
 builder.Services.AddScoped<PostService>();
-
+builder.Services.AddScoped<CommentService>();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>

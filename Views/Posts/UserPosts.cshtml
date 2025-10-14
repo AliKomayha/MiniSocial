@@ -15,39 +15,7 @@
     {
         foreach (var post in Model)
         {
-            <div class="card mb-3">
-                <div class="card-body">
-                    <!-- User Info -->
-                    <div class="d-flex align-items-center mb-2">
-
-                        <img src="@(string.IsNullOrEmpty(post.Avatar)
-                             ? Url.Content("~/images/default-avatar.png")
-                             : post.Avatar)"
-                             alt="Avatar" class="rounded-circle me-2" style="width:40px; height:40px;" />
-
-                        <strong>@post.DisplayName</strong>
-                        <p class="text-muted">@("@" + post.UserName)</p>
-                        <span class="text-muted ms-2" style="font-size:0.85rem;">
-                            @post.CreatedAt.ToString("g")
-                        </span>
-                    </div>
-
-                    <!-- Post Text -->
-                    <p>@post.Text</p>
-
-                    <!-- Post Image -->
-                    @if (!string.IsNullOrEmpty(post.ImagePath))
-                    {
-                        <img src="@post.ImagePath" alt="Post Image" class="img-fluid rounded mb-2" />
-                    }
-
-                    <!-- Likes & Comments -->
-                    <div class="d-flex justify-content-start text-muted" style="font-size:0.9rem;">
-                        <span class="me-3">❤️ @post.LikeCount</span>
-                        <span>💬 @post.CommentCount</span>
-                    </div>
-                </div>
-            </div>
+             @Html.Partial("_PostCard", post)
         }
     }
 </div>

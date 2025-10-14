@@ -1,0 +1,24 @@
+﻿@model MiniSocial.Models.ProfileViewModel
+
+<h3>@Model.Profile.DisplayName is Following</h3>
+
+@if (Model.Following.Any())
+{
+    <ul class="list-group">
+        @foreach (var user in Model.Following)
+        {
+            <li class="list-group-item d-flex align-items-center">
+                <img src="@user.Avatar ?? " /images/default-avatar.png"" class="rounded-circle me-3" style="width:50px; height:50px; object-fit:cover;" />
+                <div>
+                    <strong>@user.DisplayName</strong><br />
+                    <span class="text-muted">@user.User.Username</span>
+                </div>
+                <a asp-controller="Profiles" asp-action="ViewProfile" asp-route-id="@user.UserId" class="btn btn-sm btn-outline-primary ms-auto">View Profile</a>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Not following anyone yet.</p>
+}

@@ -37,9 +37,9 @@ namespace MiniSocial.Services
                 {
                     profile = new Profile
                     {
-                        Id = reader.GetInt32(0),
-                        DisplayName = reader.GetString(1),
-                        Avatar = reader.IsDBNull(2) ? null : reader.GetString(2),
+                            Id = reader.GetInt32(0),
+                            DisplayName = reader.GetString(1),
+                            Avatar = reader.IsDBNull(2) ? null : reader.GetString(2),
                         Bio = reader.IsDBNull(3) ? null : reader.GetString(3),
                         BirthDate = reader.IsDBNull(4) ? null : reader.GetDateTime(4),
                         IsPrivate = reader.GetBoolean(5),

@@ -1,0 +1,38 @@
+﻿@model List<MiniSocial.Dtos.CommentDto>
+
+@foreach (var comment in Model)
+{
+    <div class="d-flex mb-3 ms-@(comment.ParentCommentId.HasValue ? 4 : 0)" style="border-bottom:1px solid #e1e8ed; padding-bottom:12px;">
+        <img src="@(string.IsNullOrEmpty(comment.Avatar)
+                         ? Url.Content("~/images/default-avatar.png")
+                         : comment.Avatar)"
+             alt="Avatar"
+             class="rounded-circle me-2"
+             style="width:36px; height:36px; object-fit:cover; border:1px solid #e1e8ed;" />
+        <div class="flex-grow-1">
+            <div>
+                <span class="fw-bold">@comment.DisplayName</span>
+                <span class="text-muted ms-1">@("@" + comment.UserName)</span>
+                <span class="text-muted ms-2" style="font-size:0.85rem;">· @comment.CreatedAt.ToString("g")</span>
+            </div>
+            <div class="mb-1" style="font-size:1rem;">@comment.Text</div>
+
+            <button type="button"
+                    class="btn btn-link p-0 border-0 text-decoration-none reply-btn"
+                    data-comment-id="@comment.Id"
+                    style="font-size:0.95rem; color:#1da1f2;">
+                Reply
+            </button>
+
+            @if (comment.UserId == int.Parse(User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value))
+            {
+                <button class="btn btn-sm btn-link text-danger delete-comment-btn" data-comment-id="@comment.Id" data-post-id="@comment.PostId">Delete</button>
+            }
+
+            @if (comment.Replies != null && comment.Replies.Any())
+            {
+                @Html.Partial("_CommentsList", comment.Replies)
+            }
+        </div>
+    </div>
+}

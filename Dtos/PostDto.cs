@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using MiniSocial.Models;
 
 namespace MiniSocial.Dtos
@@ -19,5 +20,9 @@ namespace MiniSocial.Dtos
 
         [ValidateNever]
         public User User { get; set; }
+
+        public List<CommentDto> Comments { get; set; } = new();
+
+       
     }
 }

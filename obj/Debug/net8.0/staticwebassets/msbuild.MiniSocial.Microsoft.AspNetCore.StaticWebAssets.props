@@ -1116,6 +1116,60 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\0d323b49-0418-497f-8174-6251468421ca.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\4b1a1e3f-925b-4965-9dc5-521212c147fa.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MiniSocial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MiniSocial</BasePath>
+      <RelativePath>uploads/4b1a1e3f-925b-4965-9dc5-521212c147fa.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>op2yyx6b90</Fingerprint>
+      <Integrity>POh+LRdmgWwbfZv3YBG17CLCcTxHKUDtso+FuHaNjRs=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\4b1a1e3f-925b-4965-9dc5-521212c147fa.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\4cae2ba6-3826-47ba-a709-71fe4b3fbbc6.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MiniSocial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MiniSocial</BasePath>
+      <RelativePath>uploads/4cae2ba6-3826-47ba-a709-71fe4b3fbbc6.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>7xrwzm0us8</Fingerprint>
+      <Integrity>pQ+mXysEG7K3vOiy3JhtKaiT6svUZa2HNhPaEzbV/z4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\4cae2ba6-3826-47ba-a709-71fe4b3fbbc6.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\c50adc80-4ca5-4b2c-8a5a-9ca119631942.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MiniSocial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MiniSocial</BasePath>
+      <RelativePath>uploads/c50adc80-4ca5-4b2c-8a5a-9ca119631942.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>k7sdpm5807</Fingerprint>
+      <Integrity>8A6iIMetO+bVGd+WxLP4o8CNKklCIzTJUf+ugaiZrF4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\c50adc80-4ca5-4b2c-8a5a-9ca119631942.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\d8c51c16-db95-43ba-be3f-8bcb951a7941.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>MiniSocial</SourceId>
@@ -1152,6 +1206,150 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\e6051e73-8e9f-4f88-8c63-7d9feb9b9853.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\eac1bbe8-23be-46bb-a2ea-a9509e521bfa.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MiniSocial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MiniSocial</BasePath>
+      <RelativePath>uploads/eac1bbe8-23be-46bb-a2ea-a9509e521bfa.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>op2yyx6b90</Fingerprint>
+      <Integrity>POh+LRdmgWwbfZv3YBG17CLCcTxHKUDtso+FuHaNjRs=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\eac1bbe8-23be-46bb-a2ea-a9509e521bfa.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\posts\1c53fb7d-6941-488d-a717-49472bfbb9a0.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MiniSocial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MiniSocial</BasePath>
+      <RelativePath>uploads/posts/1c53fb7d-6941-488d-a717-49472bfbb9a0.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>r7sg04g1wi</Fingerprint>
+      <Integrity>18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\posts\1c53fb7d-6941-488d-a717-49472bfbb9a0.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\posts\506c9de4-eba2-4df5-a46c-dd959f6b52a4.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MiniSocial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MiniSocial</BasePath>
+      <RelativePath>uploads/posts/506c9de4-eba2-4df5-a46c-dd959f6b52a4.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>r7sg04g1wi</Fingerprint>
+      <Integrity>18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\posts\506c9de4-eba2-4df5-a46c-dd959f6b52a4.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\posts\8ff0bbe5-aa02-4738-b1a0-24423c2dd84c.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MiniSocial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MiniSocial</BasePath>
+      <RelativePath>uploads/posts/8ff0bbe5-aa02-4738-b1a0-24423c2dd84c.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>r7sg04g1wi</Fingerprint>
+      <Integrity>18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\posts\8ff0bbe5-aa02-4738-b1a0-24423c2dd84c.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\posts\a58a6499-4b4a-45b0-8395-b5e5a693edb4.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MiniSocial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MiniSocial</BasePath>
+      <RelativePath>uploads/posts/a58a6499-4b4a-45b0-8395-b5e5a693edb4.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>r7sg04g1wi</Fingerprint>
+      <Integrity>18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\posts\a58a6499-4b4a-45b0-8395-b5e5a693edb4.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\posts\a93cb68b-5105-4e67-a818-d8b30993fba0.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MiniSocial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MiniSocial</BasePath>
+      <RelativePath>uploads/posts/a93cb68b-5105-4e67-a818-d8b30993fba0.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>r7sg04g1wi</Fingerprint>
+      <Integrity>18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\posts\a93cb68b-5105-4e67-a818-d8b30993fba0.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\posts\d868722b-e8a2-4c18-9e35-23f910cc373d.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MiniSocial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MiniSocial</BasePath>
+      <RelativePath>uploads/posts/d868722b-e8a2-4c18-9e35-23f910cc373d.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>r7sg04g1wi</Fingerprint>
+      <Integrity>18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\posts\d868722b-e8a2-4c18-9e35-23f910cc373d.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\posts\e28bfd97-1f81-41a5-8f7f-5332f2ffb1e7.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MiniSocial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MiniSocial</BasePath>
+      <RelativePath>uploads/posts/e28bfd97-1f81-41a5-8f7f-5332f2ffb1e7.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>k7sdpm5807</Fingerprint>
+      <Integrity>8A6iIMetO+bVGd+WxLP4o8CNKklCIzTJUf+ugaiZrF4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\posts\e28bfd97-1f81-41a5-8f7f-5332f2ffb1e7.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\posts\f421d839-86c6-4e5b-b3b7-e162cd831f20_photo_3_2024-01-21_22-11-51.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>MiniSocial</SourceId>
@@ -1169,6 +1367,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\posts\f421d839-86c6-4e5b-b3b7-e162cd831f20_photo_3_2024-01-21_22-11-51.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\posts\fc9b1dde-18b5-49de-9ae0-08f72cdb4e30.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MiniSocial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MiniSocial</BasePath>
+      <RelativePath>uploads/posts/fc9b1dde-18b5-49de-9ae0-08f72cdb4e30.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>r7sg04g1wi</Fingerprint>
+      <Integrity>18JNaz3VKggEs3v2gDKqcvqHuzyjs89fsw7sM0pWvyQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\posts\fc9b1dde-18b5-49de-9ae0-08f72cdb4e30.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

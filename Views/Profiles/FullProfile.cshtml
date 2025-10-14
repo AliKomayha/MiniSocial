@@ -4,42 +4,63 @@
     var currentUserId = int.Parse(User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value);
     bool isOwner = currentUserId == Model.Profile.UserId;
 }
-<div class="profile-container  mt-4" style="max-width:600px; margin:auto;">
-    
+<div class="profile-container mt-4" style="max-width:600px; margin:auto;">
+
     <div class="d-flex align-items-center justify-content-between mb-4">
-        <div>
-            <img src="@Model.Profile.Avatar" alt="Avatar" class="rounded-circle shadow" style="width:140px; height:140px; object-fit:cover; border:4px solid #e1e8ed;" />
-        </div>
+        <img src="@Model.Profile.Avatar" alt="Avatar" class="rounded-circle shadow" style="width:140px; height:140px; object-fit:cover; border:4px solid #e1e8ed;" />
+        
         @if (isOwner)
         {
+            <a class="btn btn-outline-primary px-4 py-2 fw-semibold" style="border-radius:30px;" asp-controller="Profiles" asp-action="EditProfile">Edit Profile</a>
+        }
+
+        @if(!isOwner){
+
             <div>
-                <a class="btn btn-outline-primary px-4 py-2 fw-semibold" style="border-radius:30px;" asp-controller="Profiles" asp-action="EditProfile">Edit Profile</a>
+                @if (Model.FollowStatus == "None")
+                {
+                    <button class="btn btn-outline-primary" id="followBtn" data-user-id="@Model.Profile.UserId">
+                        @(Model.IsPrivate ? "Request Follow" : "Follow")
+                    </button>
+                }
+                else if (Model.FollowStatus == "Pending")
+                {
+                    <button class="btn btn-outline-secondary" disabled>Request Sent</button>
+                }
+                else if (Model.FollowStatus == "Accepted")
+                {
+                    <button class="btn btn-outline-danger" id="unfollowBtn" data-user-id="@Model.Profile.UserId">
+                        Unfollow
+                    </button>
+                }
             </div>
         }
     </div>
 
-
     <div class="mb-2">
-            <h2 class="fw-bold mb-1" style="font-size:2rem;">@Model.Profile.DisplayName</h2>
-            <p class="text-muted mb-2" style="font-size:1.1rem;">@("@" + Model.Profile.User.Username)</p>
+        <h2 class="fw-bold mb-1" style="font-size:2rem;">@Model.Profile.DisplayName</h2>
+        <p class="text-muted mb-2" style="font-size:1.1rem;">@("@" + Model.Profile.User.Username)</p>
     </div>
 
-    <div class="mb-3 " style="font-size:1.05rem;">
+    <div class="mb-3" style="font-size:1.05rem;">
         @Model.Profile.Bio
     </div>
 
     <div class="d-flex justify-content gap-5 mt-2 mb-2">
-        <span><strong>@Model.Counts.FollowersCount</strong> <span class="text-muted">Followers</span></span>
-        <span><strong>@Model.Counts.FollowingCount</strong> <span class="text-muted">Following</span></span>
+        <a asp-action="Followers" asp-route-userId="@Model.Profile.UserId" class="text-decoration-none text-dark">
+            <strong>@Model.Counts.FollowersCount</strong> Followers
+        </a>
+
+        <a asp-action="Following" asp-route-userId="@Model.Profile.UserId" class="text-decoration-none text-dark">
+            <strong>@Model.Counts.FollowingCount</strong> Following
+        </a>
     </div>
 
-
-</div>
-<div>
-    <a href="@Url.Action("Create", "Posts")" class="btn btn-success mb-3">Create Post</a>
 </div>
 
 <div class="mt-4">
+    <a href="@Url.Action("Create", "Posts")" class="btn btn-success mb-3" style="border-radius:24px;">Create Post</a>
+ 
     <h4 class="mb-3">Posts</h4>
     @if (Model.Posts != null && Model.Posts.Any())
     {
@@ -55,3 +76,88 @@
 </div>
 
 
+
+
+@section Scripts {
+    <script>
+        //delete comment 
+        document.addEventListener("click", function(e) {
+            const btn = e.target.closest(".delete-comment-btn");
+            if (!btn) return;
+
+            const commentId = btn.getAttribute("data-comment-id");
+            const postId = btn.getAttribute("data-post-id");
+
+            fetch(`/Posts/DeleteComment`, {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: `commentId=${commentId}&postId=${postId}`
+            })
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById(`comments-${postId}`).innerHTML = html;
+            });
+        });
+
+        //like post
+        document.addEventListener("click", function (e) {
+            const btn = e.target.closest(".like-btn");
+            if (!btn) return;
+
+            e.preventDefault();
+
+            const postId = btn.getAttribute("data-post-id");
+            const countSpan = btn.querySelector(".like-count");
+
+            btn.disabled = true;
+
+            fetch(`/Posts/ToggleLike`, {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: `postId=${postId}`
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    countSpan.textContent = data.likeCount;
+                }
+                btn.disabled = false;
+            })
+            .catch(() => btn.disabled = false);
+        });
+
+
+        ///follow unfollow
+
+                // FOLLOW / UNFOLLOW
+        document.addEventListener("click", function (e) {
+            const followBtn = e.target.closest("#followBtn");
+            const unfollowBtn = e.target.closest("#unfollowBtn");
+            if (!followBtn && !unfollowBtn) return;
+
+            const userId = (followBtn || unfollowBtn).getAttribute("data-user-id");
+            const isFollow = !!followBtn;
+
+            fetch(`/Profiles/${isFollow ? "Follow" : "UnFollow"}`, {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: `followingId=${userId}`
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        if (isFollow) {
+                            followBtn.textContent = data.status === "Pending" ? "Request Sent" : "Unfollow";
+                            followBtn.disabled = data.status === "Pending";
+                            followBtn.className = "btn btn-outline-secondary";
+                        } else {
+                            unfollowBtn.textContent = "Follow";
+                            unfollowBtn.className = "btn btn-outline-primary";
+                            unfollowBtn.id = "followBtn";
+                        }
+                    }
+                });
+        });
+
+    </script>
+}

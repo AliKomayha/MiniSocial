@@ -61,6 +61,7 @@ C:\Users\technologic\source\repos\MiniSocial\MiniSocial\obj\Debug\net8.0\MiniSoc
 C:\Users\technologic\source\repos\MiniSocial\MiniSocial\obj\Debug\net8.0\MiniSocial.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\technologic\source\repos\MiniSocial\MiniSocial\obj\Debug\net8.0\MiniSocial.RazorAssemblyInfo.cache
 C:\Users\technologic\source\repos\MiniSocial\MiniSocial\obj\Debug\net8.0\MiniSocial.RazorAssemblyInfo.cs
+C:\Users\technologic\source\repos\MiniSocial\MiniSocial\obj\Debug\net8.0\MiniSocial.sourcelink.json
 C:\Users\technologic\source\repos\MiniSocial\MiniSocial\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\technologic\source\repos\MiniSocial\MiniSocial\obj\Debug\net8.0\scopedcss\bundle\MiniSocial.styles.css
 C:\Users\technologic\source\repos\MiniSocial\MiniSocial\obj\Debug\net8.0\scopedcss\projectbundle\MiniSocial.bundle.scp.css

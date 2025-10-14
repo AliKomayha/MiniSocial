@@ -1,11 +1,86 @@
 ﻿@model MiniSocial.Models.ProfileViewModel
 
-<div class="profile">
-    <h2>@Model.Profile.DisplayName</h2>
-    <p>This profile is private.</p>
+@{
+    var currentUserId = int.Parse(User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value);
+    bool isOwner = currentUserId == Model.Profile.UserId;
+}
 
-    <div class="counts">
-        <span><strong>Followers:</strong> @Model.Counts.FollowersCount</span>
-        <span><strong>Following:</strong> @Model.Counts.FollowingCount</span>
+
+<div class="profile-container mt-4" style="max-width:600px; margin:auto;">
+    <div class="d-flex align-items-center justify-content-between mb-4">
+        <img src="@Model.Profile.Avatar" alt="Avatar"
+             class="rounded-circle shadow"
+             style="width:140px; height:140px; object-fit:cover; border:4px solid #e1e8ed;" />
+
+        @if (!isOwner)
+        {
+            <div>
+                @if (Model.FollowStatus == "None")
+                {
+                    <button class="btn btn-outline-primary" id="followBtn" data-user-id="@Model.Profile.UserId">
+                        Follow
+                    </button>
+                }
+                else if (Model.FollowStatus == "Pending")
+                {
+                    <button class="btn btn-outline-secondary" disabled>Request Sent</button>
+                }
+                else if (Model.FollowStatus == "Accepted")
+                {
+                    <button class="btn btn-outline-danger" id="unfollowBtn" data-user-id="@Model.Profile.UserId">
+                        Unfollow
+                    </button>
+                }
+            </div>
+        }
+    </div>
+
+    <div class="mb-2">
+        <h2 class="fw-bold mb-1" style="font-size:2rem;">@Model.Profile.DisplayName</h2>
+        <p class="text-muted mb-2" style="font-size:1.1rem;">@("@" + Model.Profile.User.Username)</p>
+    </div>
+
+    <div class="d-flex justify-content gap-5 mt-2 mb-3">
+        <span><strong>@Model.Counts.FollowersCount</strong> <span class="text-muted">Followers</span></span>
+        <span><strong>@Model.Counts.FollowingCount</strong> <span class="text-muted">Following</span></span>
+    </div>
+
+    <div class="alert alert-secondary mt-4 text-center" style="border-radius:16px;">
+        <strong>This profile is private.</strong> Follow to see their posts and activity.
     </div>
 </div>
+
+
+@section Scripts {
+    <script>
+        // FOLLOW / UNFOLLOW
+        document.addEventListener("click", function (e) {
+            const followBtn = e.target.closest("#followBtn");
+            const unfollowBtn = e.target.closest("#unfollowBtn");
+            if (!followBtn && !unfollowBtn) return;
+
+            const userId = (followBtn || unfollowBtn).getAttribute("data-user-id");
+            const isFollow = !!followBtn;
+
+            fetch(`/Profiles/${isFollow ? "Follow" : "UnFollow"}`, {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: `followingId=${userId}`
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        if (isFollow) {
+                            followBtn.textContent = data.status === "Pending" ? "Request Sent" : "Unfollow";
+                            followBtn.disabled = data.status === "Pending";
+                            followBtn.className = "btn btn-outline-secondary";
+                        } else {
+                            unfollowBtn.textContent = "Follow";
+                            unfollowBtn.className = "btn btn-outline-primary";
+                            unfollowBtn.id = "followBtn";
+                        }
+                    }
+                });
+        });
+    </script>
+}

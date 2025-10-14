@@ -30,6 +30,50 @@ namespace MiniSocial.Services
 
             }
         }
+
+        public bool DeletePost(int postId, int userId)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                var command = new SqlCommand(@"DELETE Posts WHERE Id=@Id AND UserId=@UserId", connection);
+                command.Parameters.AddWithValue("@Id", postId);
+                command.Parameters.AddWithValue("@UserId", userId);
+                
+
+                return command.ExecuteNonQuery() > 0;
+            }
+
+            
+        }
+
+        public bool UpdatePost(Post post)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+
+                var command = new SqlCommand(@"
+                        UPDATE Posts
+                        SET Text = @Text,
+                        ImagePath = @ImagePath
+                            
+                        WHERE Id = @PostId
+                        AND UserId = @UserId
+
+                        ", connection);
+
+                command.Parameters.AddWithValue("@Text", post.Text);
+                command.Parameters.AddWithValue("@ImagePath", post.ImagePath ?? (object)DBNull.Value);
+                command.Parameters.AddWithValue("@PostId", post.Id);
+                command.Parameters.AddWithValue("@UserId", post.UserId);
+                
+                return command.ExecuteNonQuery() > 0;
+            }
+        }
+
         public List<PostDto> GetPosts(int UserId)
         {
             var posts = new List<PostDto>();
@@ -71,6 +115,90 @@ namespace MiniSocial.Services
                 return posts;
             }
 
-        }   
+        }
+
+        public Post? GetPostById(int postId)
+        {
+            Post? post = null;
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                var command = new SqlCommand(@"
+                    SELECT Id, UserId, Text, ImagePath, CreatedAt 
+                    FROM Posts WHERE Id=@Id
+                   ", connection);
+
+                command.Parameters.AddWithValue("@Id", postId);
+
+                var reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    post = new Post
+                    {
+                        Id = reader.GetInt32(0),
+                        UserId = reader.GetInt32(1),
+                        Text = reader.GetString(2),
+                        ImagePath = reader.IsDBNull(3) ? null : reader.GetString(3),
+                        
+                    };
+                    
+                }
+            }
+            return post;
+        }
+
+        public void ToggleLike(int UserId, int PostId)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                // Check if liked
+                var checkCommand = new SqlCommand("SELECT COUNT(*) FROM Likes WHERE UserId=@UserId AND PostId=@PostId", connection);
+                checkCommand.Parameters.AddWithValue("@UserId", UserId);
+                checkCommand.Parameters.AddWithValue("@PostId", PostId);
+                bool exists = (int)checkCommand.ExecuteScalar() > 0;
+
+                if (exists)
+                {
+                    // Ulike
+                    var deleteCommand = new SqlCommand("DELETE FROM Likes WHERE UserId=@UserId AND PostId=@PostId", connection);
+                    deleteCommand.Parameters.AddWithValue("@UserId", UserId);
+                    deleteCommand.Parameters.AddWithValue("@PostId", PostId);
+                    deleteCommand.ExecuteNonQuery();
+                }
+                else
+                {
+                    // Like
+                    var insertCommand = new SqlCommand(@"
+                        IF NOT EXISTS (SELECT 1 FROM Likes WHERE UserId=@UserId AND PostId=@PostId)
+                        BEGIN
+                        INSERT INTO Likes (UserId, PostId) VALUES(@UserId, @PostId)
+                        END", connection);
+                    insertCommand.Parameters.AddWithValue("@UserId", UserId);
+                    insertCommand.Parameters.AddWithValue("@PostId", PostId);
+                    insertCommand.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public int GetLikeCount(int postId)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                var command = new SqlCommand("SELECT COUNT(*) FROM Likes WHERE PostId = @PostId", connection);
+                command.Parameters.AddWithValue("@PostId", postId);
+
+                return (int)command.ExecuteScalar();
+            }
+        }
+
+
+
+
+
     }
 }

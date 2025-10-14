@@ -31,7 +31,7 @@
                     <div class="form-group mb-3">
                         <label for="AvatarFile">Avatar URL</label>
                         
-                        <input type="file" name="AvatarFile" class="form-control" accept="image/*" />
+                        <input type="file" asp-for="AvatarFile" name="AvatarFile" class="form-control" accept="image/*"/>
                         @if (!string.IsNullOrEmpty(Model.Avatar))
                         {
                             <img src="@Model.Avatar" alt="Avatar" class="img-thumbnail mt-2" style="max-width:150px;" />
