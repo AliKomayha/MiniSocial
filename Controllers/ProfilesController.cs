@@ -314,6 +314,15 @@ namespace MiniSocial.Controllers
 
 
 
+        [HttpGet]
+        public IActionResult Search(string query)
+        {
+            if (string.IsNullOrWhiteSpace(query))
+                return View(new List<SearchProfileDto>());
+
+            var results = _profileService.SearchProfiles(query);
+            return View(results);
+        }
 
 
 

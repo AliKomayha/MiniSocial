@@ -10,6 +10,9 @@ builder.Services.AddScoped<FollowService>();
 builder.Services.AddScoped<ProfileService>();
 builder.Services.AddScoped<PostService>();
 builder.Services.AddScoped<CommentService>();
+builder.Services.AddScoped<FeedService>();
+
+builder.Services.AddScoped<MiniSocial.Repositories.FeedRepository>();
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
@@ -38,6 +41,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Feed}/{action=Following}/{id?}");
 
 app.Run();

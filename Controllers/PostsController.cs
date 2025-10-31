@@ -57,7 +57,7 @@ namespace MiniSocial.Controllers
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            var post = _postService.GetPostById(id);
+            var post = _postService.GetPostEntityById(id);
             int currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
 
             if (post == null || post.UserId != currentUserId)
@@ -72,7 +72,7 @@ namespace MiniSocial.Controllers
             int currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
             post.UserId = currentUserId;
 
-            var existingPost = _postService.GetPostById(post.Id); // get current post from DB
+            var existingPost = _postService.GetPostEntityById(post.Id); // get current post from DB
             if (existingPost == null || existingPost.UserId != currentUserId)
                 return NotFound();
 

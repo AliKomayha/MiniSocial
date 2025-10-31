@@ -13,6 +13,8 @@ namespace MiniSocial.Dtos
         public string? Avatar { get; set; } // from User
         public string Text { get; set; }
         public string? ImagePath { get; set; }
+
+        public bool IsPrivate { get; set; } // from profile
         public int LikeCount { get; set; }
         public int CommentCount { get; set; }
 

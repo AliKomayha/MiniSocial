@@ -1,0 +1,35 @@
+﻿@model List<MiniSocial.Dtos.PostDto>
+
+<div id="feed-container">
+    @await Html.PartialAsync("_PostListPartial", Model)
+</div>
+
+<div id="loader" style="text-align:center; display:none;">
+    <p>Loading...</p>
+</div>
+
+
+@section Scripts {
+    <script>
+        let offset = @Model.Count;
+        const limit = 10;
+        let loading = false;
+        let feedType = '@ViewContext.RouteData.Values["action"]'; // "ForYou" or "Following"
+
+        window.addEventListener('scroll', async () => {
+            if (loading) return;
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 400) {
+                loading = true;
+                document.getElementById('loader').style.display = 'block';
+                const response = await fetch(`/Feed/${feedType}?offset=${offset}&limit=${limit}`, {
+                    headers: { "X-Requested-With": "XMLHttpRequest" }
+                });
+                const html = await response.text();
+                document.getElementById('feed-container').insertAdjacentHTML('beforeend', html);
+                offset += limit;
+                document.getElementById('loader').style.display = 'none';
+                loading = false;
+            }
+        });
+    </script>
+}

@@ -117,37 +117,73 @@ namespace MiniSocial.Services
 
         }
 
-        public Post? GetPostById(int postId)
+        public PostDto? GetPostById(int postId)
         {
-            Post? post = null;
+            PostDto? postDto = null;
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
 
                 var command = new SqlCommand(@"
-                    SELECT Id, UserId, Text, ImagePath, CreatedAt 
-                    FROM Posts WHERE Id=@Id
+                   SELECT p.Id, p.Text, p.ImagePath, p.CreatedAt,
+                   u.Id, u.UserName, pr.DisplayName, pr.Avatar,
+                   (SELECT COUNT(*) FROM Likes l WHERE l.PostId = p.Id) AS LikeCount,
+                   (SELECT COUNT(*) FROM Comments c WHERE c.PostId = p.Id) AS CommentCount
+                    FROM Posts p
+                    JOIN Users u ON p.UserId = u.Id
+                    JOIN Profiles pr ON u.Id = pr.UserId
+                    WHERE p.Id = @PostId
                    ", connection);
 
-                command.Parameters.AddWithValue("@Id", postId);
+                command.Parameters.AddWithValue("@PostId", postId);
 
                 var reader = command.ExecuteReader();
 
                 if (reader.Read())
                 {
-                    post = new Post
+                    postDto = new PostDto
                     {
                         Id = reader.GetInt32(0),
-                        UserId = reader.GetInt32(1),
-                        Text = reader.GetString(2),
-                        ImagePath = reader.IsDBNull(3) ? null : reader.GetString(3),
-                        
+                        Text = reader.GetString(1),
+                        ImagePath = reader.IsDBNull(2) ? null : reader.GetString(2),
+                        CreatedAt = reader.GetDateTime(3),
+                        UserId = reader.GetInt32(4),
+                        UserName = reader.GetString(5),
+                        DisplayName = reader.GetString(6),
+                        Avatar = reader.IsDBNull(7) ? null : reader.GetString(7),
+                        LikeCount = reader.GetInt32(8),
+                        CommentCount = reader.GetInt32(9)
+
                     };
                     
                 }
             }
-            return post;
+            return postDto;
         }
+
+        public Post? GetPostEntityById(int postId)
+        {
+            using var connection = new SqlConnection(_connectionString);
+            connection.Open();
+
+            var command = new SqlCommand("SELECT Id, UserId, Text, ImagePath, CreatedAt FROM Posts WHERE Id=@PostId", connection);
+            command.Parameters.AddWithValue("@PostId", postId);
+
+            using var reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                return new Post
+                {
+                    Id = reader.GetInt32(0),
+                    UserId = reader.GetInt32(1),
+                    Text = reader.GetString(2),
+                    ImagePath = reader.IsDBNull(3) ? null : reader.GetString(3),
+                    CreatedAt = reader.GetDateTime(4)
+                };
+            }
+            return null;
+        }
+
 
         public void ToggleLike(int UserId, int PostId)
         {

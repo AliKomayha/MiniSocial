@@ -5,12 +5,56 @@
       "PackagePath": "staticwebassets\\MiniSocial.ov98zq4mul.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\css\\bootstrap\\_media.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\_media.css"
+    },
+    {
+      "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\css\\bootstrap\\mixins\\_border-radius.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\mixins\\_border-radius.css"
+    },
+    {
+      "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\css\\bootstrap\\mixins\\_screen-reader.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\mixins\\_screen-reader.css"
+    },
+    {
+      "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\css\\bootstrap\\mixins\\_visibility.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\mixins\\_visibility.css"
+    },
+    {
+      "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\css\\bootstrap\\utilities\\_stretched-link.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\utilities\\_stretched-link.css"
+    },
+    {
       "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
       "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\js\\popper.js",
+      "PackagePath": "staticwebassets\\js\\popper.js"
     },
     {
       "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\js\\site.js",
@@ -257,6 +301,14 @@
       "PackagePath": "staticwebassets\\uploads\\4cae2ba6-3826-47ba-a709-71fe4b3fbbc6.jpg"
     },
     {
+      "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\a24ad084-e31c-48ef-9e11-71c048771bc2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\a24ad084-e31c-48ef-9e11-71c048771bc2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\adc421e3-9030-4aa2-bca7-79c55f63f6bc.jpg",
+      "PackagePath": "staticwebassets\\uploads\\adc421e3-9030-4aa2-bca7-79c55f63f6bc.jpg"
+    },
+    {
       "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\c50adc80-4ca5-4b2c-8a5a-9ca119631942.jpg",
       "PackagePath": "staticwebassets\\uploads\\c50adc80-4ca5-4b2c-8a5a-9ca119631942.jpg"
     },
@@ -273,12 +325,20 @@
       "PackagePath": "staticwebassets\\uploads\\eac1bbe8-23be-46bb-a2ea-a9509e521bfa.jpg"
     },
     {
+      "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\13ea31fd-e920-490d-a451-39060584f9bc_photo_3_2024-01-21_22-11-51.jpg",
+      "PackagePath": "staticwebassets\\uploads\\posts\\13ea31fd-e920-490d-a451-39060584f9bc_photo_3_2024-01-21_22-11-51.jpg"
+    },
+    {
       "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\1c53fb7d-6941-488d-a717-49472bfbb9a0.jpg",
       "PackagePath": "staticwebassets\\uploads\\posts\\1c53fb7d-6941-488d-a717-49472bfbb9a0.jpg"
     },
     {
       "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\506c9de4-eba2-4df5-a46c-dd959f6b52a4.jpg",
       "PackagePath": "staticwebassets\\uploads\\posts\\506c9de4-eba2-4df5-a46c-dd959f6b52a4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\592bd719-36d8-40c9-bbb8-bb04cf559e2e_photo_2_2024-01-21_22-11-51.jpg",
+      "PackagePath": "staticwebassets\\uploads\\posts\\592bd719-36d8-40c9-bbb8-bb04cf559e2e_photo_2_2024-01-21_22-11-51.jpg"
     },
     {
       "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\8ff0bbe5-aa02-4738-b1a0-24423c2dd84c.jpg",
@@ -291,6 +351,10 @@
     {
       "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\a93cb68b-5105-4e67-a818-d8b30993fba0.jpg",
       "PackagePath": "staticwebassets\\uploads\\posts\\a93cb68b-5105-4e67-a818-d8b30993fba0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\c89ff56a-cafe-44dc-9b63-a276d5dc3365_photo_8_2024-01-21_22-11-51.jpg",
+      "PackagePath": "staticwebassets\\uploads\\posts\\c89ff56a-cafe-44dc-9b63-a276d5dc3365_photo_8_2024-01-21_22-11-51.jpg"
     },
     {
       "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\d868722b-e8a2-4c18-9e35-23f910cc373d.jpg",

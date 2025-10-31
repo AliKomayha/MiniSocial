@@ -4,70 +4,115 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - MiniSocial</title>
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" />
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MiniSocial.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
 
-        @using System.Security.Claims
+     @using System.Security.Claims
+    @{
+        var userId = User.Identity.IsAuthenticated
+            ? int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value)
+            : 0;
+    }
 
-        @{
-            var userId = User.Identity.IsAuthenticated 
-                ? int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value)
-                : 0;
-        }
+    <div class="wrapper d-flex align-items-stretch">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="active">
+            <h1><a asp-controller="Feed" asp-action="Following" class="logo">M.</a></h1>
 
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MiniSocial</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <ul class="list-unstyled components mb-5">
+                <li class="active"><a asp-controller="Feed" asp-action="Following" asp-route-offset="0" asp-route-limit="10" ><span class="fa fa-home"></span> Home</a></li>
 
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li><a class="dropdown-item" asp-controller="Profiles" asp-action="FollowRequests">Follow Requests</a></li>
-                        
-                            @if (User.Identity.IsAuthenticated)
-                            {
-                                <li class="nav-item">
-                                    <a class="btn btn-outline-primary" href="@Url.Action("ViewProfile", "Profiles", new { id = userId })">
-                                        My Profile
-                                    </a>
-                                </li>
-                            }
-                            
-                        
-                    </ul>
+                
+
+                <li><a asp-controller="Profiles" asp-action="Search"><span class="fa fa-search"></span> Search</a></li> 
+                
+               
+
+
+                @if (User.Identity.IsAuthenticated){
+                    <li>
+                        <a asp-controller="Profiles" asp-action="ViewProfile" asp-route-id="@userId">
+                            <span class="fa fa-user-circle"></span> My Profile
+                        </a>
+                    </li>
+                 }
+                
+                 <li>
+                    <div class="form-check form-switch ps-0 ms-3">
+                        <input class="form-check-input" type="checkbox" id="theme-toggle" role="switch">
+                        <label class="form-check-label" for="theme-toggle" style="cursor: pointer;">
+                            <span class="fa fa-moon me-1"></span> Dark Mode
+                        </label>
+                    </div>
+                </li>
+
+
+                @* <li><a asp-controller="Posts" asp-action="Index"><span class="fa fa-sticky-note"></span> Posts</a></li> *@
+                
+                @* <li><a asp-controller="Settings" asp-action="Index"><span class="fa fa-cogs"></span> Settings</a></li> *@
+                <!-- My Profile + Logout -->
+
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li>
+                        <a href="#" onclick="document.getElementById('logoutForm').submit(); return false;">
+                            <span class="fa fa-sign-out"></span> Logout
+                        </a>
+                        <form id="logoutForm" asp-controller="Auth" asp-action="Logout" method="post" style="display: none;"></form>
+                    </li>
+                }
+            </ul>
+        </nav>
+
+        <!-- Page Content -->
+        <div id="content" class="p-4 p-md-5">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                    </button>
                 </div>
-            </div>
-           
-            @if (User.Identity.IsAuthenticated)
-            {
-                <div class="d-flex">
-                    <form asp-controller="Auth" asp-action="Logout" method="post" class="d-inline">
-                        <button type="submit" class="btn btn-outline-danger btn-sm">
-                            <i class="fas fa-sign-out-alt me-1"></i>Logout
-                        </button>
+                <div>
+                    <form asp-controller="Profiles" asp-action="Search" method="get" class="d-flex mb-3">
+                        <input type="text" name="query" class="form-control me-2" placeholder="Search users..." />
+                        <button type="submit" class="btn btn-primary">Search</button>
                     </form>
                 </div>
-            }
-        </nav>
-    </header>
+                
+            </nav>
+
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
+
+            <!-- Image Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+              <img id="modalImage" src="" class="img-fluid rounded shadow" alt="Post Image">
+            </div>
+          </div>
+        </div>
+
+
 
     <footer class="border-top footer text-muted">
         <div class="container">
@@ -77,6 +122,41 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/popper.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/main.js"></script>
+
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        const root = document.documentElement;
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        root.setAttribute('data-theme', savedTheme);
+        toggle.checked = savedTheme === 'dark';
+
+        toggle.addEventListener('change', () => {
+          if (toggle.checked) {
+            root.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+          } else {
+            root.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+          }
+        });
+
+
+        function openImageModal(imageUrl) {
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = imageUrl;
+            const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+            modal.show();
+        }
+    </script>
+
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

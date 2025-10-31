@@ -80,51 +80,51 @@
 
 @section Scripts {
     <script>
-        //delete comment 
-        document.addEventListener("click", function(e) {
-            const btn = e.target.closest(".delete-comment-btn");
-            if (!btn) return;
+        // delete comment 
+        // document.addEventListener("click", function(e) {
+        //     const btn = e.target.closest(".delete-comment-btn");
+        //     if (!btn) return;
 
-            const commentId = btn.getAttribute("data-comment-id");
-            const postId = btn.getAttribute("data-post-id");
+        //     const commentId = btn.getAttribute("data-comment-id");
+        //     const postId = btn.getAttribute("data-post-id");
 
-            fetch(`/Posts/DeleteComment`, {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: `commentId=${commentId}&postId=${postId}`
-            })
-            .then(res => res.text())
-            .then(html => {
-                document.getElementById(`comments-${postId}`).innerHTML = html;
-            });
-        });
+        //     fetch(`/Posts/DeleteComment`, {
+        //         method: "POST",
+        //         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        //         body: `commentId=${commentId}&postId=${postId}`
+        //     })
+        //     .then(res => res.text())
+        //     .then(html => {
+        //         document.getElementById(`comments-${postId}`).innerHTML = html;
+        //     });
+        // });
 
-        //like post
-        document.addEventListener("click", function (e) {
-            const btn = e.target.closest(".like-btn");
-            if (!btn) return;
+        // like post
+        // document.addEventListener("click", function (e) {
+        //     const btn = e.target.closest(".like-btn");
+        //     if (!btn) return;
 
-            e.preventDefault();
+        //     e.preventDefault();
 
-            const postId = btn.getAttribute("data-post-id");
-            const countSpan = btn.querySelector(".like-count");
+        //     const postId = btn.getAttribute("data-post-id");
+        //     const countSpan = btn.querySelector(".like-count");
 
-            btn.disabled = true;
+        //     btn.disabled = true;
 
-            fetch(`/Posts/ToggleLike`, {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: `postId=${postId}`
-            })
-            .then(res => res.json())
-            .then(data => {
-                if (data.success) {
-                    countSpan.textContent = data.likeCount;
-                }
-                btn.disabled = false;
-            })
-            .catch(() => btn.disabled = false);
-        });
+        //     fetch(`/Posts/ToggleLike`, {
+        //         method: "POST",
+        //         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        //         body: `postId=${postId}`
+        //     })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         if (data.success) {
+        //             countSpan.textContent = data.likeCount;
+        //         }
+        //         btn.disabled = false;
+        //     })
+        //     .catch(() => btn.disabled = false);
+        // });
 
 
         ///follow unfollow

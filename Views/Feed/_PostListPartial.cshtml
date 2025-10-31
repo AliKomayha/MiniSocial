@@ -1,0 +1,6 @@
+﻿@model List<MiniSocial.Dtos.PostDto>
+
+@foreach (var post in Model)
+{
+    @await Html.PartialAsync("_PostCard", post)
+}

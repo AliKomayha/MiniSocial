@@ -1,0 +1,114 @@
+﻿@model MiniSocial.Dtos.PostDetailsDto
+
+<div class="container mt-4" style="max-width:700px;">
+<!-- Post Header -->
+
+<div class="card mb-3" style="border-radius:18px; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+    <div class="card-body">
+        <div class="d-flex align-items-center mb-2">
+            <img src="@Model.Post.Avatar" class="rounded-circle me-2" style="width:45px;height:45px;object-fit:cover;">
+            <div>
+                <strong>@Model.Post.UserName</strong><br />
+                <small class="text-muted">@Model.Post.CreatedAt.ToString("g")</small>
+            </div>
+        </div>
+        <p>@Model.Post.Text</p>
+        @if (!string.IsNullOrEmpty(Model.Post.ImagePath))
+        {
+            <img src="@Model.Post.ImagePath" class="img-fluid rounded mb-2" />
+        }
+    </div>
+
+        <div class="d-flex justify-content-start text-muted mb-2" style="font-size:0.95rem;">
+            <span class="me-3">❤️ @Model.Post.LikeCount</span>
+            <span>💬 @Model.Post.CommentCount</span>
+        </div>
+</div>
+
+<!-- Add Comment Form -->
+<form id="add-comment-form" class="d-flex align-items-center mb-3" data-post-id="@Model.Post.Id">
+
+        <input type="text" name="text" class="form-control me-2" placeholder="Reply..." style="border-radius:24px;" />
+    <input type="hidden" name="parentCommentId" value="" />
+
+        <button class="btn btn-primary" style="border-radius:24px;">Reply</button>
+</form>
+
+<!-- Comments List -->
+<div id="comments-container">
+    @await Html.PartialAsync("_CommentsList", Model.Comments)
+</div>
+
+</div>
+<script>
+    const commentsContainer = document.getElementById('comments-container');
+    const addCommentForm = document.getElementById("add-comment-form");
+
+    // Update comment count dynamically
+    function updateCommentCount(postId) {
+        fetch(`/Feed/GetPost/${postId}`) // endpoint should return PostDto as JSON
+            .then(res => res.json())
+            .then(post => {
+                const countSpan = document.querySelector(`#comment-count-${postId}`);
+                if(countSpan){
+                    countSpan.textContent = post.CommentCount;
+                }
+            });
+    }
+
+    // Add comment / reply
+    addCommentForm.addEventListener("submit", function(e){
+        e.preventDefault();
+        const postId = this.getAttribute("data-post-id");
+        const text = this.querySelector("input[name='text']").value;
+        const parentId = this.querySelector("input[name='parentCommentId']").value;
+
+        fetch('/Posts/AddComment', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: `postId=${postId}&text=${encodeURIComponent(text)}&parentCommentId=${parentId}`
+        })
+        .then(res => res.text())
+        .then(html => {
+            commentsContainer.innerHTML = html;
+            this.querySelector("input[name='text']").value = '';
+            this.querySelector("input[name='parentCommentId']").value = '';
+
+            updateCommentCount(postId); // now fetches real count from server
+        });
+    });
+
+    // Delegated click for reply and delete buttons
+    commentsContainer.addEventListener("click", function(e){
+        // Reply
+        const replyBtn = e.target.closest(".reply-btn");
+        if(replyBtn){
+            const parentId = replyBtn.getAttribute("data-comment-id");
+            addCommentForm.querySelector("input[name='parentCommentId']").value = parentId;
+            addCommentForm.querySelector("input[name='text']").focus();
+            return;
+        }
+
+        // Delete
+        const deleteBtn = e.target.closest(".delete-comment-btn");
+        if(deleteBtn){
+            const commentId = deleteBtn.getAttribute("data-comment-id");
+            const postId = deleteBtn.getAttribute("data-post-id");
+
+            if(!confirm("Are you sure you want to delete this comment?")) return;
+
+            fetch('/Posts/DeleteComment', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `commentId=${commentId}&postId=${postId}`
+            })
+            .then(res => res.text())
+            .then(html => {
+                commentsContainer.innerHTML = html;
+                updateCommentCount(postId); // update count after deletion
+            });
+        }
+    });
+</script>
+
+

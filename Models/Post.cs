@@ -17,6 +17,8 @@ namespace MiniSocial.Models
 
         public string? ImagePath { get; set; }
 
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
         [ValidateNever]
         public User User { get; set; }
 
