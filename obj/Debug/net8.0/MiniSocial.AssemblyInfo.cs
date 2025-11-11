@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MiniSocial")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8cbfeb2b81b232d6d960d5d7362d434eb86bea03")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65501144e9b204115336087d5b9f0ed0e6daaf26")]
 [assembly: System.Reflection.AssemblyProductAttribute("MiniSocial")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MiniSocial")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

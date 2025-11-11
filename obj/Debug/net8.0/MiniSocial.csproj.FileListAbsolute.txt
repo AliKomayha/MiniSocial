@@ -80,3 +80,5 @@ C:\Users\technologic\source\repos\MiniSocial\MiniSocial\obj\Debug\net8.0\MiniSoc
 C:\Users\technologic\source\repos\MiniSocial\MiniSocial\obj\Debug\net8.0\MiniSocial.genruntimeconfig.cache
 C:\Users\technologic\source\repos\MiniSocial\MiniSocial\bin\Debug\net8.0\MiniSocial.pdb
 C:\Users\technologic\source\repos\MiniSocial\MiniSocial\obj\Debug\net8.0\ref\MiniSocial.dll
+C:\Users\technologic\source\repos\MiniSocial\MiniSocial\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\technologic\source\repos\MiniSocial\MiniSocial\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

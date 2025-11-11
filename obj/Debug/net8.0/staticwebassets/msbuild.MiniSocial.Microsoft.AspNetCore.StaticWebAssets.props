@@ -1314,6 +1314,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\0d323b49-0418-497f-8174-6251468421ca.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\1c977309-0c91-40e7-8b76-a07aebce155d.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>MiniSocial</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/MiniSocial</BasePath>
+      <RelativePath>uploads/1c977309-0c91-40e7-8b76-a07aebce155d.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>fo517e3qjf</Fingerprint>
+      <Integrity>/+EHNm/SdYIi8w9idqm5pZBt3Ud6WoXmxmTs3h/L8tA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\1c977309-0c91-40e7-8b76-a07aebce155d.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\4b1a1e3f-925b-4965-9dc5-521212c147fa.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>MiniSocial</SourceId>

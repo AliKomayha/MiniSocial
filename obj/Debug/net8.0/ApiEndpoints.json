@@ -1,1 +1,198 @@
-[]
+[
+  {
+    "ContainingType": "MiniSocial.ApiControllers.AuthApiController",
+    "Method": "Login",
+    "RelativePath": "api/AuthApi/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MiniSocial.ApiControllers.UserLoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniSocial.ApiControllers.AuthApiController",
+    "Method": "Logout",
+    "RelativePath": "api/AuthApi/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniSocial.ApiControllers.AuthApiController",
+    "Method": "Signup",
+    "RelativePath": "api/AuthApi/signup",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "MiniSocial.ApiControllers.UserSignupRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniSocial.ApiControllers.ProfilesApiController",
+    "Method": "AcceptRequest",
+    "RelativePath": "api/ProfilesApi/AcceptRequest/accept/{followId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "followId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniSocial.ApiControllers.ProfilesApiController",
+    "Method": "DeclineRequest",
+    "RelativePath": "api/ProfilesApi/DeclineRequest/decline/{followId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "followId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniSocial.ApiControllers.ProfilesApiController",
+    "Method": "Follow",
+    "RelativePath": "api/ProfilesApi/Follow/follow/{followinngId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "followingId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "followinngId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniSocial.ApiControllers.ProfilesApiController",
+    "Method": "Followers",
+    "RelativePath": "api/ProfilesApi/Followers/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniSocial.ApiControllers.ProfilesApiController",
+    "Method": "Following",
+    "RelativePath": "api/ProfilesApi/Following/following/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniSocial.ApiControllers.ProfilesApiController",
+    "Method": "FollowRequests",
+    "RelativePath": "api/ProfilesApi/FollowRequests/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniSocial.ApiControllers.ProfilesApiController",
+    "Method": "GetProfile",
+    "RelativePath": "api/ProfilesApi/GetProfile/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniSocial.ApiControllers.ProfilesApiController",
+    "Method": "Search",
+    "RelativePath": "api/ProfilesApi/Search/search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "query",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniSocial.ApiControllers.ProfilesApiController",
+    "Method": "UnFollow",
+    "RelativePath": "api/ProfilesApi/UnFollow/unfollow/{followinngId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "followingId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "followinngId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
