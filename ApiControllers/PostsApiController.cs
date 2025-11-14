@@ -28,7 +28,7 @@ namespace MiniSocial.ApiControllers
         [HttpPost]
         public IActionResult Create([FromForm] string text, [FromForm] IFormFile? image)
         {
-            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            var userId = int.Parse(User.FindFirstValue("userId"));
             if (userId == 0) return Unauthorized();
 
             string? imagePath = null;
@@ -101,8 +101,10 @@ namespace MiniSocial.ApiControllers
         [HttpPost]
         public IActionResult ToggleLike([FromForm] int postId)
         {
-            int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
-            _postService.ToggleLike(postId, userId);
+            var userId = int.Parse(User.FindFirstValue("userId"));
+            Console.WriteLine("userId from token: " + userId);
+
+            _postService.ToggleLike(userId, postId);
             int updatedCount = _postService.GetLikeCount(postId);
 
             return Ok(new { success = true, likeCount = updatedCount });

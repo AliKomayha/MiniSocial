@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "P7msEOtmvsKgLKEYk5EruYxq+wE+1Z8SYo1c4vNmLaI=",
+  "Hash": "WTFQfo7oAtkJsu4npNBu/RifJccSk1VXrZ6d7B4W2R8=",
   "Source": "MiniSocial",
   "BasePath": "_content/MiniSocial",
   "Mode": "Default",
@@ -2031,6 +2031,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\posts\\eb606288-d45f-4bc3-9b4d-e84bac126f3a.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\ee4287a7-8fd7-48e8-b1fd-fbf4c0e90c36_scaled_1000794585.jpg",
+      "SourceId": "MiniSocial",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\",
+      "BasePath": "_content/MiniSocial",
+      "RelativePath": "uploads/posts/ee4287a7-8fd7-48e8-b1fd-fbf4c0e90c36_scaled_1000794585#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "519ns3osqk",
+      "Integrity": "h2oPjEDpAGC5HstKP9YFxtNZGCCKhbPKv+Wln3Ztf98=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\posts\\ee4287a7-8fd7-48e8-b1fd-fbf4c0e90c36_scaled_1000794585.jpg"
     },
     {
       "Identity": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\f421d839-86c6-4e5b-b3b7-e162cd831f20_photo_3_2024-01-21_22-11-51.jpg",
@@ -9945,6 +9966,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-txhvWWAp6eRreSA/e6JzX1z9G1nedv5cxhiJ2SPKHR8="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/ee4287a7-8fd7-48e8-b1fd-fbf4c0e90c36_scaled_1000794585.519ns3osqk.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\ee4287a7-8fd7-48e8-b1fd-fbf4c0e90c36_scaled_1000794585.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "64575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"h2oPjEDpAGC5HstKP9YFxtNZGCCKhbPKv+Wln3Ztf98=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Nov 2025 00:36:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "519ns3osqk"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/ee4287a7-8fd7-48e8-b1fd-fbf4c0e90c36_scaled_1000794585.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-h2oPjEDpAGC5HstKP9YFxtNZGCCKhbPKv+Wln3Ztf98="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/ee4287a7-8fd7-48e8-b1fd-fbf4c0e90c36_scaled_1000794585.jpg",
+      "AssetFile": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\ee4287a7-8fd7-48e8-b1fd-fbf4c0e90c36_scaled_1000794585.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "64575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"h2oPjEDpAGC5HstKP9YFxtNZGCCKhbPKv+Wln3Ztf98=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Nov 2025 00:36:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-h2oPjEDpAGC5HstKP9YFxtNZGCCKhbPKv+Wln3Ztf98="
         }
       ]
     },

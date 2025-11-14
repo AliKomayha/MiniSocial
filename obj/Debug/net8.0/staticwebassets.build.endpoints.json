@@ -7793,6 +7793,88 @@
       ]
     },
     {
+      "Route": "uploads/posts/ee4287a7-8fd7-48e8-b1fd-fbf4c0e90c36_scaled_1000794585.519ns3osqk.jpg",
+      "AssetFile": "uploads/posts/ee4287a7-8fd7-48e8-b1fd-fbf4c0e90c36_scaled_1000794585.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "64575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"h2oPjEDpAGC5HstKP9YFxtNZGCCKhbPKv+Wln3Ztf98=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Nov 2025 00:36:07 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "519ns3osqk"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-h2oPjEDpAGC5HstKP9YFxtNZGCCKhbPKv+Wln3Ztf98="
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/posts/ee4287a7-8fd7-48e8-b1fd-fbf4c0e90c36_scaled_1000794585.jpg"
+        }
+      ]
+    },
+    {
+      "Route": "uploads/posts/ee4287a7-8fd7-48e8-b1fd-fbf4c0e90c36_scaled_1000794585.jpg",
+      "AssetFile": "uploads/posts/ee4287a7-8fd7-48e8-b1fd-fbf4c0e90c36_scaled_1000794585.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "64575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"h2oPjEDpAGC5HstKP9YFxtNZGCCKhbPKv+Wln3Ztf98=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 14 Nov 2025 00:36:07 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-h2oPjEDpAGC5HstKP9YFxtNZGCCKhbPKv+Wln3Ztf98="
+        }
+      ]
+    },
+    {
       "Route": "uploads/posts/f421d839-86c6-4e5b-b3b7-e162cd831f20_photo_3_2024-01-21_22-11-51.jpg",
       "AssetFile": "uploads/posts/f421d839-86c6-4e5b-b3b7-e162cd831f20_photo_3_2024-01-21_22-11-51.jpg",
       "Selectors": [],

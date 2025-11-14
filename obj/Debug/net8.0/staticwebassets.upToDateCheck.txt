@@ -92,5 +92,6 @@ wwwroot\uploads\posts\c89ff56a-cafe-44dc-9b63-a276d5dc3365_photo_8_2024-01-21_22
 wwwroot\uploads\posts\d868722b-e8a2-4c18-9e35-23f910cc373d.jpg
 wwwroot\uploads\posts\e28bfd97-1f81-41a5-8f7f-5332f2ffb1e7.jpg
 wwwroot\uploads\posts\eb606288-d45f-4bc3-9b4d-e84bac126f3a.jpg
+wwwroot\uploads\posts\ee4287a7-8fd7-48e8-b1fd-fbf4c0e90c36_scaled_1000794585.jpg
 wwwroot\uploads\posts\f421d839-86c6-4e5b-b3b7-e162cd831f20_photo_3_2024-01-21_22-11-51.jpg
 wwwroot\uploads\posts\fc9b1dde-18b5-49de-9ae0-08f72cdb4e30.jpg

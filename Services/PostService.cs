@@ -187,6 +187,7 @@ namespace MiniSocial.Services
 
         public void ToggleLike(int UserId, int PostId)
         {
+            Console.WriteLine("user:"+ UserId     +"post:"  + PostId);
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
