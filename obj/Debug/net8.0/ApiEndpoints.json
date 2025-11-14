@@ -42,9 +42,248 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MiniSocial.ApiControllers.FeedApiController",
+    "Method": "GetFollowingFeed",
+    "RelativePath": "api/FeedApi/GetFollowingFeed",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "offset",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "limit",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[MiniSocial.Dtos.PostDto, MiniSocial, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MiniSocial.ApiControllers.PostsApiController",
+    "Method": "AddComment",
+    "RelativePath": "api/PostsApi/AddComment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "text",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "parentCommentId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniSocial.ApiControllers.PostsApiController",
+    "Method": "Create",
+    "RelativePath": "api/PostsApi/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "text",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentDisposition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Headers",
+        "Type": "Microsoft.AspNetCore.Http.IHeaderDictionary",
+        "IsRequired": false
+      },
+      {
+        "Name": "Length",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniSocial.ApiControllers.PostsApiController",
+    "Method": "Delete",
+    "RelativePath": "api/PostsApi/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniSocial.ApiControllers.PostsApiController",
+    "Method": "DeleteComment",
+    "RelativePath": "api/PostsApi/DeleteComment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "commentId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "postId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniSocial.ApiControllers.PostsApiController",
+    "Method": "Edit",
+    "RelativePath": "api/PostsApi/Edit",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "text",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentDisposition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Headers",
+        "Type": "Microsoft.AspNetCore.Http.IHeaderDictionary",
+        "IsRequired": false
+      },
+      {
+        "Name": "Length",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniSocial.ApiControllers.PostsApiController",
+    "Method": "GetComments",
+    "RelativePath": "api/PostsApi/GetComments",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniSocial.ApiControllers.PostsApiController",
+    "Method": "ToggleLike",
+    "RelativePath": "api/PostsApi/ToggleLike",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniSocial.ApiControllers.PostsApiController",
+    "Method": "UserPosts",
+    "RelativePath": "api/PostsApi/UserPosts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MiniSocial.ApiControllers.ProfilesApiController",
     "Method": "AcceptRequest",
-    "RelativePath": "api/ProfilesApi/AcceptRequest/accept/{followId}",
+    "RelativePath": "api/ProfilesApi/AcceptRequest/{followId}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -60,7 +299,7 @@
   {
     "ContainingType": "MiniSocial.ApiControllers.ProfilesApiController",
     "Method": "DeclineRequest",
-    "RelativePath": "api/ProfilesApi/DeclineRequest/decline/{followId}",
+    "RelativePath": "api/ProfilesApi/DeclineRequest/{followId}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -76,7 +315,7 @@
   {
     "ContainingType": "MiniSocial.ApiControllers.ProfilesApiController",
     "Method": "Follow",
-    "RelativePath": "api/ProfilesApi/Follow/follow/{followinngId}",
+    "RelativePath": "api/ProfilesApi/Follow/{followingId}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -84,11 +323,6 @@
       {
         "Name": "followingId",
         "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "followinngId",
-        "Type": "",
         "IsRequired": true
       }
     ],
@@ -113,7 +347,7 @@
   {
     "ContainingType": "MiniSocial.ApiControllers.ProfilesApiController",
     "Method": "Following",
-    "RelativePath": "api/ProfilesApi/Following/following/{userId}",
+    "RelativePath": "api/ProfilesApi/Following/{userId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -129,17 +363,11 @@
   {
     "ContainingType": "MiniSocial.ApiControllers.ProfilesApiController",
     "Method": "FollowRequests",
-    "RelativePath": "api/ProfilesApi/FollowRequests/{id}",
+    "RelativePath": "api/ProfilesApi/FollowRequests",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -160,8 +388,24 @@
   },
   {
     "ContainingType": "MiniSocial.ApiControllers.ProfilesApiController",
+    "Method": "IsFollowing",
+    "RelativePath": "api/ProfilesApi/IsFollowing/{targetUserId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "targetUserId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiniSocial.ApiControllers.ProfilesApiController",
     "Method": "Search",
-    "RelativePath": "api/ProfilesApi/Search/search",
+    "RelativePath": "api/ProfilesApi/Search",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -177,7 +421,7 @@
   {
     "ContainingType": "MiniSocial.ApiControllers.ProfilesApiController",
     "Method": "UnFollow",
-    "RelativePath": "api/ProfilesApi/UnFollow/unfollow/{followinngId}",
+    "RelativePath": "api/ProfilesApi/UnFollow/{followingId}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -185,11 +429,6 @@
       {
         "Name": "followingId",
         "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "followinngId",
-        "Type": "",
         "IsRequired": true
       }
     ],

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using MiniSocial.Dtos;
 using MiniSocial.Models;
 using MiniSocial.Services;
@@ -91,32 +92,52 @@ namespace MiniSocial.ApiControllers
 
 
         [Authorize]
-        [HttpGet ("{id}")]
+        [HttpGet]
         public IActionResult FollowRequests()
         {
             var currentUserId = int.Parse(User.FindFirstValue("userId"));
-
             var pendingRequests = _followService.GetPendingRequests(currentUserId);
-
             var requests = new List<dynamic>();
 
-            /// continue
-            /// 
-            ///
-            ///
-            ///
-            ///
-            ///
-            ///
-            ///
-            
-            return Ok();
+            using var connection = new SqlConnection(_connectionString);
+            connection.Open();
+
+            foreach (var (followId, followerId) in pendingRequests)
+            {
+                var command = new SqlCommand(@"
+            SELECT 
+                u.Id AS FollowerId,
+                u.Username,
+                p.DisplayName,
+                p.Avatar
+            FROM Users u
+            JOIN Profiles p ON p.UserId = u.Id
+            WHERE u.Id = @FollowerId
+        ", connection);
+
+                command.Parameters.AddWithValue("@FollowerId", followerId);
+
+                using var reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    requests.Add(new
+                    {
+                        Id = followId,
+                        FollowerId = followerId,
+                        Username = reader["Username"].ToString(),
+                        DisplayName = reader["DisplayName"].ToString(),
+                        Avatar = reader["Avatar"].ToString()
+                    });
+                }
+            }
+
+            return Ok(requests);
         }
 
 
         // follow unfollow  feature 
         [Authorize]
-        [HttpPost ("follow/{followinngId}")]
+        [HttpPost ("{followingId}")]
         public IActionResult Follow(int followingId)
         {
             var followerId = int.Parse(User.FindFirstValue("userId"));
@@ -125,7 +146,7 @@ namespace MiniSocial.ApiControllers
         }
 
         [Authorize]
-        [HttpPost("unfollow/{followinngId}")]
+        [HttpPost("{followingId}")]
         public IActionResult UnFollow(int followingId)
         {
             var followerId = int.Parse(User.FindFirstValue("userId"));
@@ -133,8 +154,9 @@ namespace MiniSocial.ApiControllers
             return Ok(new { success = true });
 
         }
+
         [Authorize]
-        [HttpPost("accept/{followId}")]
+        [HttpPost("{followId}")]
         public IActionResult AcceptRequest(int followId)
         {
             _followService.ApproveFollow(followId);
@@ -142,13 +164,21 @@ namespace MiniSocial.ApiControllers
         }
 
         [Authorize]
-        [HttpPost("decline/{followId}")]
+        [HttpPost("{followId}")]
         public IActionResult DeclineRequest(int followId)
         {
             _followService.RejectFollow(followId);
             return Ok(new { success = true });
         }
-
+        
+        [Authorize]
+        [HttpGet("{targetUserId}")]
+        public IActionResult IsFollowing(int targetUserId)
+        {
+            var userId = int.Parse(User.FindFirst("UserId").Value);
+            bool isFollowing = _followService.IsApprovedFollower(userId, targetUserId); ////// check this if should be reversed///
+            return Ok(isFollowing);
+        }
 
 
         /// get followers and following  list 
@@ -188,7 +218,7 @@ namespace MiniSocial.ApiControllers
 
         /// search profile /
         [Authorize]
-        [HttpGet("search")]
+        [HttpGet]
         public IActionResult Search(string query)
         {
             if (string.IsNullOrWhiteSpace(query))
@@ -198,9 +228,9 @@ namespace MiniSocial.ApiControllers
             return Ok(results);
         }
 
-
             
-
+            
+        
 
 
     }
