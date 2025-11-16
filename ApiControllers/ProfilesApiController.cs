@@ -33,6 +33,70 @@ namespace MiniSocial.ApiControllers
             _commentService = commentService;
         }
 
+        
+        [Authorize]
+        [HttpPost]
+        public IActionResult EditProfile([FromForm] Profile profile)
+        {
+            var currentUserId = int.Parse(User.FindFirstValue("userId"));
+
+            profile.UserId = currentUserId;
+
+            // Load existing profile first
+            var existingProfile = _profileService.GetProfileByUserId(currentUserId);
+            if (existingProfile == null)
+                return NotFound(new { message = "Profile not found" });
+
+            // --- Handle Avatar upload ---
+            if (profile.AvatarFile != null && profile.AvatarFile.Length > 0)
+            {
+                var uploads = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
+                if (!Directory.Exists(uploads))
+                    Directory.CreateDirectory(uploads);
+
+                var fileName = $"{Guid.NewGuid()}{Path.GetExtension(profile.AvatarFile.FileName)}";
+                var filePath = Path.Combine(uploads, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    profile.AvatarFile.CopyTo(stream);
+                }
+
+                profile.Avatar = $"/uploads/{fileName}";
+            }
+            else
+            {
+                // keep old avatar
+                profile.Avatar = existingProfile.Avatar;
+            }
+
+            // Keep existing data if fields were not sent
+            profile.DisplayName ??= existingProfile.DisplayName;
+            profile.Bio ??= existingProfile.Bio;
+            profile.BirthDate ??= existingProfile.BirthDate;
+            profile.IsPrivate = profile.IsPrivate; // stays same unless user changes it
+
+            bool success = _profileService.UpdateProfile(profile);
+
+            if (!success)
+                return BadRequest(new { message = "Failed to update profile" });
+
+            return Ok(new
+            {
+                message = "Profile updated successfully",
+                profile = new
+                {
+                    profile.DisplayName,
+                    profile.Bio,
+                    profile.Avatar,
+                    profile.BirthDate,
+                    profile.IsPrivate
+                }
+            });
+        }
+
+
+
 
         [Authorize]
         [HttpGet("{id}")]

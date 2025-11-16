@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets\\MiniSocial.ov98zq4mul.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\css\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
-    },
-    {
       "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\css\\bootstrap\\_media.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\_media.css"
     },
@@ -31,10 +27,6 @@
     {
       "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
-    },
-    {
-      "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\css\\style.css",
-      "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
       "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\favicon.ico",
@@ -309,6 +301,10 @@
       "PackagePath": "staticwebassets\\uploads\\4cae2ba6-3826-47ba-a709-71fe4b3fbbc6.jpg"
     },
     {
+      "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\6c22e5b5-409d-4c2a-9046-5d8f8a59ff46.jpg",
+      "PackagePath": "staticwebassets\\uploads\\6c22e5b5-409d-4c2a-9046-5d8f8a59ff46.jpg"
+    },
+    {
       "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\a24ad084-e31c-48ef-9e11-71c048771bc2.jpg",
       "PackagePath": "staticwebassets\\uploads\\a24ad084-e31c-48ef-9e11-71c048771bc2.jpg"
     },
@@ -365,6 +361,10 @@
       "PackagePath": "staticwebassets\\uploads\\posts\\a93cb68b-5105-4e67-a818-d8b30993fba0.jpg"
     },
     {
+      "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\c48b1cd3-2386-401a-ba07-f15ab3f8e2b7_scaled_1000795882.jpg",
+      "PackagePath": "staticwebassets\\uploads\\posts\\c48b1cd3-2386-401a-ba07-f15ab3f8e2b7_scaled_1000795882.jpg"
+    },
+    {
       "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\c89ff56a-cafe-44dc-9b63-a276d5dc3365_photo_8_2024-01-21_22-11-51.jpg",
       "PackagePath": "staticwebassets\\uploads\\posts\\c89ff56a-cafe-44dc-9b63-a276d5dc3365_photo_8_2024-01-21_22-11-51.jpg"
     },
@@ -387,6 +387,10 @@
     {
       "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\f421d839-86c6-4e5b-b3b7-e162cd831f20_photo_3_2024-01-21_22-11-51.jpg",
       "PackagePath": "staticwebassets\\uploads\\posts\\f421d839-86c6-4e5b-b3b7-e162cd831f20_photo_3_2024-01-21_22-11-51.jpg"
+    },
+    {
+      "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\f5e8066e-a3fb-484c-a29c-c2ab032dca22_scaled_1000795895.jpg",
+      "PackagePath": "staticwebassets\\uploads\\posts\\f5e8066e-a3fb-484c-a29c-c2ab032dca22_scaled_1000795895.jpg"
     },
     {
       "Id": "C:\\Users\\technologic\\source\\repos\\MiniSocial\\MiniSocial\\wwwroot\\uploads\\posts\\fc9b1dde-18b5-49de-9ae0-08f72cdb4e30.jpg",

@@ -65,7 +65,7 @@ namespace MiniSocial.ApiControllers
         [HttpPost]
         public IActionResult Edit([FromForm] int id, [FromForm] string text, [FromForm] IFormFile? image)
         {
-            int currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            int currentUserId = int.Parse(User.FindFirstValue("userId"));
             var existingPost = _postService.GetPostEntityById(id);
             if (existingPost == null || existingPost.UserId != currentUserId)
                 return NotFound();
@@ -90,7 +90,7 @@ namespace MiniSocial.ApiControllers
         [HttpPost]
         public IActionResult Delete([FromForm] int postId)
         {
-            int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            var userId = int.Parse(User.FindFirstValue("userId"));
             if (!_postService.DeletePost(postId, userId))
                 return BadRequest("Cannot delete this post.");
 
@@ -122,7 +122,7 @@ namespace MiniSocial.ApiControllers
         [HttpPost]
         public IActionResult AddComment([FromForm] int postId, [FromForm] string text, [FromForm] int? parentCommentId)
         {
-            int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            var userId = int.Parse(User.FindFirstValue("userId"));
 
             _commentService.AddComment(new Comment
             {
@@ -140,7 +140,7 @@ namespace MiniSocial.ApiControllers
         [HttpPost]
         public IActionResult DeleteComment([FromForm] int commentId, [FromForm] int postId)
         {
-            int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            var userId = int.Parse(User.FindFirstValue("userId"));
 
             var comment = _commentService.GetCommentsByPost(postId)
                                          .SelectMany(c => FlattenComments(c))

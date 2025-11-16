@@ -1,0 +1,2 @@
+C:\Users\technologic\source\repos\MiniSocial\MiniSocial\wwwroot\css\bootstrap.min.css
+C:\Users\technologic\source\repos\MiniSocial\MiniSocial\wwwroot\css\style.css

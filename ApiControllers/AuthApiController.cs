@@ -87,8 +87,6 @@ namespace MiniSocial.ApiControllers
                 return StatusCode(500, new { message = "An error occurred during signup." });
             }
 
-
-           
         }
 
         [HttpPost("login")]

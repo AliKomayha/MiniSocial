@@ -5,13 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - MiniSocial</title>
 
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/style.css" />
-
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MiniSocial.styles.css" asp-append-version="true" />
@@ -25,108 +20,109 @@
             : 0;
     }
 
-    <div class="wrapper d-flex align-items-stretch">
-        <!-- Sidebar -->
-        <nav id="sidebar" class="active">
-            <h1><a asp-controller="Feed" asp-action="Following" class="logo">M.</a></h1>
+    <div class="app-layout">
+        <!-- Fixed Sidebar -->
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-logo">
+                    <a asp-controller="Feed" asp-action="Following" class="logo-link">
+                        <span class="logo-icon">M</span>
+                        <span class="logo-text">MiniSocial</span>
+                    </a>
+                </div>
 
-            <ul class="list-unstyled components mb-5">
-                <li class="active"><a asp-controller="Feed" asp-action="Following" asp-route-offset="0" asp-route-limit="10" ><span class="fa fa-home"></span> Home</a></li>
+                <nav class="sidebar-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a asp-controller="Feed" asp-action="Following" asp-route-offset="0" asp-route-limit="10" class="nav-link">
+                                <span class="nav-icon fa fa-home"></span>
+                                <span class="nav-text">Home</span>
+                            </a>
+                        </li>
 
-                
+                        <li class="nav-item">
+                            <a asp-controller="Profiles" asp-action="Search" class="nav-link">
+                                <span class="nav-icon fa fa-search"></span>
+                                <span class="nav-text">Search</span>
+                            </a>
+                        </li>
 
-                <li><a asp-controller="Profiles" asp-action="Search"><span class="fa fa-search"></span> Search</a></li> 
-                
-               
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a asp-controller="Profiles" asp-action="FollowRequests" class="nav-link">
+                                    <span class="nav-icon fa fa-user-plus"></span>
+                                    <span class="nav-text">Follow Requests</span>
+                                </a>
+                            </li>
 
+                            <li class="nav-item">
+                                <a asp-controller="Profiles" asp-action="ViewProfile" asp-route-id="@userId" class="nav-link">
+                                    <span class="nav-icon fa fa-user-circle"></span>
+                                    <span class="nav-text">My Profile</span>
+                                </a>
+                            </li>
+                        }
 
-                @if (User.Identity.IsAuthenticated){
-                    <li>
-                        <a asp-controller="Profiles" asp-action="ViewProfile" asp-route-id="@userId">
-                            <span class="fa fa-user-circle"></span> My Profile
-                        </a>
-                    </li>
-                 }
-                
-                 <li>
-                    <div class="form-check form-switch ps-0 ms-3">
-                        <input class="form-check-input" type="checkbox" id="theme-toggle" role="switch">
-                        <label class="form-check-label" for="theme-toggle" style="cursor: pointer;">
-                            <span class="fa fa-moon me-1"></span> Dark Mode
-                        </label>
+                        <li class="nav-item nav-divider"></li>
+
+                        <li class="nav-item">
+                            <div class="theme-toggle-container">
+                                <label class="theme-toggle" for="theme-toggle">
+                                    <span class="nav-icon fa fa-moon"></span>
+                                    <span class="nav-text">Dark Mode</span>
+                                    <input type="checkbox" id="theme-toggle" class="theme-checkbox">
+                                    <span class="theme-slider"></span>
+                                </label>
+                            </div>
+                        </li>
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a href="#" onclick="document.getElementById('logoutForm').submit(); return false;" class="nav-link nav-link-logout">
+                                    <span class="nav-icon fa fa-sign-out"></span>
+                                    <span class="nav-text">Logout</span>
+                                </a>
+                                <form id="logoutForm" asp-controller="Auth" asp-action="Logout" method="post" style="display: none;"></form>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="main-container">
+            <!-- Fixed Top Search Bar -->
+            <header class="top-header">
+                <form asp-controller="Profiles" asp-action="Search" method="get" class="search-form">
+                    <div class="search-input-wrapper">
+                        <span class="search-icon fa fa-search"></span>
+                        <input type="text" name="query" class="search-input" placeholder="Search users..." />
                     </div>
-                </li>
+                </form>
+            </header>
 
-
-                @* <li><a asp-controller="Posts" asp-action="Index"><span class="fa fa-sticky-note"></span> Posts</a></li> *@
-                
-                @* <li><a asp-controller="Settings" asp-action="Index"><span class="fa fa-cogs"></span> Settings</a></li> *@
-                <!-- My Profile + Logout -->
-
-                @if (User.Identity.IsAuthenticated)
-                {
-                    <li>
-                        <a href="#" onclick="document.getElementById('logoutForm').submit(); return false;">
-                            <span class="fa fa-sign-out"></span> Logout
-                        </a>
-                        <form id="logoutForm" asp-controller="Auth" asp-action="Logout" method="post" style="display: none;"></form>
-                    </li>
-                }
-            </ul>
-        </nav>
-
-        <!-- Page Content -->
-        <div id="content" class="p-4 p-md-5">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
-                <div class="container-fluid">
-                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                </div>
-                <div>
-                    <form asp-controller="Profiles" asp-action="Search" method="get" class="d-flex mb-3">
-                        <input type="text" name="query" class="form-control me-2" placeholder="Search users..." />
-                        <button type="submit" class="btn btn-primary">Search</button>
-                    </form>
-                </div>
-                
-            </nav>
-
-            <main role="main" class="pb-3">
+            <!-- Page Content -->
+            <main class="main-content">
                 @RenderBody()
             </main>
         </div>
     </div>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+
+    <!-- Image Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-transparent border-0">
+                <img id="modalImage" src="" class="img-fluid rounded shadow" alt="Post Image">
+            </div>
+        </div>
     </div>
 
-            <!-- Image Modal -->
-        <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content bg-transparent border-0">
-              <img id="modalImage" src="" class="img-fluid rounded shadow" alt="Post Image">
-            </div>
-          </div>
-        </div>
-
-
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - MiniSocial - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
-    <script src="~/js/jquery.min.js"></script>
-    <script src="~/js/popper.js"></script>
-    <script src="~/js/bootstrap.min.js"></script>
-    <script src="~/js/main.js"></script>
 
     <script>
         const toggle = document.getElementById('theme-toggle');
@@ -135,18 +131,43 @@
         // Load saved theme
         const savedTheme = localStorage.getItem('theme') || 'light';
         root.setAttribute('data-theme', savedTheme);
-        toggle.checked = savedTheme === 'dark';
+        if (toggle) {
+            toggle.checked = savedTheme === 'dark';
+        }
 
-        toggle.addEventListener('change', () => {
-          if (toggle.checked) {
-            root.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-          } else {
-            root.setAttribute('data-theme', 'light');
-            localStorage.setItem('theme', 'light');
-          }
+        if (toggle) {
+            toggle.addEventListener('change', () => {
+                if (toggle.checked) {
+                    root.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    root.setAttribute('data-theme', 'light');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        }
+
+        // Set active navigation link based on current URL
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname.toLowerCase();
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href) {
+                    const linkPath = href.toLowerCase();
+                    // Remove query strings and fragments for comparison
+                    const cleanLinkPath = linkPath.split('?')[0].split('#')[0];
+                    const cleanCurrentPath = currentPath.split('?')[0].split('#')[0];
+                    
+                    // Check if the current path matches the link path
+                    if (cleanCurrentPath === cleanLinkPath || 
+                        (cleanLinkPath !== '/' && cleanCurrentPath.startsWith(cleanLinkPath))) {
+                        link.classList.add('active');
+                    }
+                }
+            });
         });
-
 
         function openImageModal(imageUrl) {
             const modalImg = document.getElementById('modalImage');
@@ -155,7 +176,6 @@
             modal.show();
         }
     </script>
-
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
